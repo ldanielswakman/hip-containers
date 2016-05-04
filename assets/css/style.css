@@ -1,0 +1,70 @@
+/* CSS reset */
+a,abbr,address,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,label,legend,li,object,ol,p,pre,q,small,span,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,ul{border:0;margin:0;padding:0}article,aside,figcaption,figure,figure img,footer,header,hgroup,nav,object,section,video{display:block}a img{border:0}figure{position:relative}figure img{width:100%}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+figure { margin: 0; }
+
+
+
+/* --- Base: Generic --- */
+body, html {
+  width: 100%;
+  height: 100%;
+
+  font-size: 100%;
+  font-family: "Karla", Arial, sans-serif;
+  font-kerning: normal;
+  line-height: 1.5em;
+
+  /*background-color: #59c183;*/
+  color: #4a4e59;
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* --- Base: Grid --- */
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+/* --- Base: Utilities --- */
+.u-pa40 {
+  padding: 40px !important;
+}
+.u-pv40 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+
+
+/* --- Component: Nav */
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  list-style: none;
+  margin: 20px;
+}
+nav a {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-color: #d3d4d5;
+  overflow: hidden;
+  font-size: 0;
+}
