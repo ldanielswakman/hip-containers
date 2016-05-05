@@ -6,7 +6,7 @@
 
   <? foreach ($pages->visible() as $section) :?>
 
-    <section id="<?= $section->slug() ?>" class="u-pv40">
+    <section id="<?= $section->slug() ?>" class="section u-pv40">
       <div class="row">
         <div class="col-xs">
           <h2><?= $section->title() ?></h2>

@@ -15,6 +15,11 @@
     'assets/css/style.css',
     'https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic',
   )) ?>
+  <?= js(array(
+    'assets/js/jquery-2.2.3.min.js',
+    'assets/js/jquery.smooth-scroll.min.js',
+    'assets/js/scripts.js',
+  )) ?>
 
 </head>
 <body>

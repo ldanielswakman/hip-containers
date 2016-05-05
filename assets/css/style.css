@@ -21,6 +21,9 @@ body, html {
   font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+a {
+  text-decoration: none;
+}
 
 
 
@@ -56,15 +59,33 @@ nav {
 }
 nav ul {
   list-style: none;
-  margin: 20px;
+  padding: 20px;
+  text-align: right;
 }
 nav a {
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  display: inline-block;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 10px;
   margin-bottom: 10px;
+  padding: 0;
   background-color: #d3d4d5;
   overflow: hidden;
   font-size: 0;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease;
+}
+nav ul:hover a,
+nav a.isActive {
+  padding: 0 10px;
+  font-size: 1em;
+  color: #4a4e59;
+}
+nav ul a:hover {
+  background-color: #b1b2b3;
+}
+nav a.isActive {
+  background-color: #7bbf82;
+  color: #fff !important;
 }
