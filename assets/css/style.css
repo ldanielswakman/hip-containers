@@ -86,6 +86,6 @@ nav ul a:hover {
   background-color: #b1b2b3;
 }
 nav a.isActive {
-  background-color: #7bbf82;
+  background-color: #7bbf82 !important;
   color: #fff !important;
 }

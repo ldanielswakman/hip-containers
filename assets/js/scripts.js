@@ -3,9 +3,22 @@ events = 'ready scroll resize scrollstart scrollstop';
 $(document).on(events, function() { scrollActions(); });
 
 $(document).ready(function () {
+
   // initiating smooth scroll
-  // $('a[href^="#"]').smoothScroll({});
+  $('a[href^="#"]').smoothScroll({
+    afterScroll: function() {
+      if(history.pushState) {
+        history.pushState(null, null, $(this).attr('href'));
+      }
+      else {
+        location.hash = $(this).attr('href');
+      }
+    }
+  });
+
+  // initial scroll actions
   scrollActions();
+
 });
 
 function scrollActions() {
