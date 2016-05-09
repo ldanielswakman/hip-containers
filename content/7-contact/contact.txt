@@ -2,18 +2,13 @@ Title: Contact
 
 ----
 
-Text:
+Text: 
 
-## Get in touch
+<big>*Geinteresseerd, vragen, of verdere informatie? Neem gerust contact op.*</big>
 
-- (link: http://getkirby.com/support text: Kirby's support page)
-- (link: http://forum.getkirby.com text: Kirby's forum)
-- (link: http://github.com/getkirby text: Kirby on Github)
-- <support@getkirby.com>
+(link: #contactform text: Contact class: button button--white u-mv20) (link: #offerte text: Vraag offerte aan class: button button--white u-mv20)
+(link: #facebook text: Volg ons of Facebook class: button) (link: #offerte text: Inspiratie op Pinterest class: button)
 
-## Follow us on Twitter
+----
 
-- Follow Kirby on Twitter (twitter: @getkirby)
-- Follow Bastian on Twitter (twitter: @bastianallgeier)
-- Follow Nico on Twitter (twitter: @distantnative)
-- Follow Sascha on Twitter (twitter: @sashtown)
+Bg: darkblue

@@ -14,7 +14,6 @@ body, html {
   font-kerning: normal;
   line-height: 1.5em;
 
-  /*background-color: #59c183;*/
   color: #4a4e59;
 
   -webkit-font-smoothing: antialiased;
@@ -24,24 +23,106 @@ body, html {
 a {
   text-decoration: none;
 }
+p {
+  max-width: 45rem;
+}
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  font-weight: normal;
+  opacity: 0.5;
+  text-align: center;
+}
 
 
 
 /* --- Base: Grid --- */
 .row {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 
 
 /* --- Base: Utilities --- */
+.u-mv20 {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.u-mt20 {
+  margin-top: 20px !important;
+}
+.u-mb20 {
+  margin-bottom: 20px !important;
+}
+.u-mr20 {
+  margin-right: 20px !important;
+}
 .u-pa40 {
   padding: 40px !important;
+}
+.u-pv20 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 .u-pv40 {
   padding-top: 40px !important;
   padding-bottom: 40px !important;
+}
+.u-width100 {
+  width: 100px !important;
+}
+.u-floatleft {
+  display: inline-block !important;
+  float: left !important;
+}
+.u-floatright {
+  display: inline-block !important;
+  float: right !important;
+}
+
+
+
+/* --- Base: Figure --- */
+figure {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+}
+
+
+
+/* --- Element: Button --- */
+.button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #4a4e59;
+  border: 1px solid transparent;
+  color: #fff;
+  border-radius: 20px;
+  line-height: 20px;
+}
+.button--outline {
+  background-color: transparent;
+  border-color: #4a4e59;
+  color: #4a4e59;
+}
+.button--white {
+  background-color: #fff;
+  color: #4a4e59;
+}
+
+
+
+/* --- Component: Logo */
+.logo {
+  position: fixed;
+  top: 0;
+  left: 25%;
+  z-index: 2;
+}
+.logo img {
+  width: 200px;
 }
 
 
@@ -86,6 +167,46 @@ nav ul a:hover {
   background-color: #b1b2b3;
 }
 nav a.isActive {
-  background-color: #7bbf82 !important;
+  background-color: #59c183 !important;
   color: #fff !important;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* --- Component: Section --- */
+.section {
+  position: relative;
+  padding: 10vw 0 20vw;
+}
+.section .section__curve {
+  position: absolute;
+  bottom: calc(100% - 1px);
+  left: 0;
+  width: 100vw;
+}
+.section .section__curve.section__curve--flipped {
+  transform: scaleX(-1);
+}
+.section .section__curve .st0 {
+  // box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+  filter: drop-shadow( -5px -5px 5px #000 );
+}
+
+
+
+/* --- Component: Footer --- */
+footer {
+  background-color: #4a4e59;
+  color: #fff;
+}
+
+
+
+/* --- Content-specific: #top (intro) --- */
+#intro {
+  background-image: url('../images/intro_bg.svg');
+  background-size: cover;
+  padding-top: 20vw;
 }

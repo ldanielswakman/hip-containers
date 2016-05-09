@@ -1,7 +1,7 @@
-// Bind scrollActions to namespaced events 
-events = 'ready scroll resize scrollstart scrollstop';
-$(document).on(events, function() { scrollActions(); });
+// defining scrollevents
+scrollevents = 'ready scroll resize scrollstart scrollstop';
 
+// 'uncompononented' js
 $(document).ready(function () {
 
   // initiating smooth scroll
@@ -16,12 +16,20 @@ $(document).ready(function () {
     }
   });
 
-  // initial scroll actions
-  scrollActions();
-
 });
 
-function scrollActions() {
+
+
+
+// Component: navOnScroll
+$(document).on(scrollevents, function() { navOnScroll(); });
+
+$(document).ready(function () {
+  // initial scroll actions
+  navOnScroll();
+});
+
+function navOnScroll() {
   scroll = $(window).scrollTop();
   delta = 100000; // big number
   active_id = null;
@@ -34,7 +42,6 @@ function scrollActions() {
       active_id = $(this).attr('id');
     }
   });
-  console.log(active_id);
 
   if($('.section.isActive').attr('id') !== active_id) {
     // add active class to slide
@@ -46,3 +53,21 @@ function scrollActions() {
   }
 }
 
+
+
+
+// Component: contentLazyScroll
+// $(document).on(scrollevents, function() { contentLazyScroll(); });
+
+function contentLazyScroll() {
+  scroll = $(window).scrollTop();
+
+  $('.section__content').each(function() {
+    delta = scroll - $(this).offset().top;
+    if(scroll > $(this).closest('.section').offset().top && delta > 0) {
+      $(this).css('transform', 'translateY(' + delta + 'px)');
+    } else {
+      // $(this).css('border', 'none');
+    }
+  });
+}

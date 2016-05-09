@@ -10,3 +10,11 @@ fields:
   text:
     label: Text
     type:  textarea
+  bg:
+    label: Background color
+    type: select
+    options:
+      white: White
+      lightestgreen: Lightest Green
+      green: Green
+      darkblue: Dark Blue

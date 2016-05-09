@@ -3,3 +3,7 @@ Title: Tarieven
 ----
 
 Text: 
+
+----
+
+Bg: white
