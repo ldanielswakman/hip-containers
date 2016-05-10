@@ -4,6 +4,17 @@ Title: Verhaal
 
 Text: 
 
+<h3 class="verhaal__text__stage1"><span class="c-green">Stap 1:</span> Hergebruikte materialen</h3>
+Always Riding is an independent multi brand online store. Launched in 2008, it’s passion and purpose is to help riders all around the world choose and wear the most comfortable.
+<div style="height: 50vh;"></div>
+
+<h3 class="verhaal__text__stage2"><span class="c-green">Stap 2:</span> Op maat gemaakt</h3>
+Always Riding is an independent multi brand online store. Launched in 2008, it’s passion and purpose is to help riders all around the world choose and wear the most comfortable.
+<div style="height: 50vh;"></div>
+
+<h3 class="verhaal__text__stage3"><span class="c-green">Stap 3:</span> Volledige oplevering</h3>
+Always Riding is an independent multi brand online store. Launched in 2008, it’s passion and purpose is to help riders all around the world choose and wear the most comfortable.
+
 ----
 
 Bg: lightestgreen

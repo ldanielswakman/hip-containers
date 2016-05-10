@@ -30,8 +30,12 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-weight: normal;
-  opacity: 0.5;
+  opacity: 0.25;
   text-align: center;
+}
+::selection {
+  background-color: #4a4e59;
+  color: #fff;
 }
 
 
@@ -48,6 +52,10 @@ h4 {
 .u-mv20 {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
+}
+.u-mh5 {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
 }
 .u-mt20 {
   margin-top: 20px !important;
@@ -69,6 +77,10 @@ h4 {
   padding-top: 40px !important;
   padding-bottom: 40px !important;
 }
+.u-ph20 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
 .u-width100 {
   width: 100px !important;
 }
@@ -79,6 +91,22 @@ h4 {
 .u-floatright {
   display: inline-block !important;
   float: right !important;
+}
+.u-aligncenter {
+  text-align: center;
+}
+.u-rounded-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+
+/* --- Base: Colours --- */
+.c-green {
+  color: #59c183;
 }
 
 
@@ -111,6 +139,9 @@ figure {
   background-color: #fff;
   color: #4a4e59;
 }
+.button--small {
+  padding: 5px 10px;
+}
 
 
 
@@ -118,8 +149,8 @@ figure {
 .logo {
   position: fixed;
   top: 0;
-  left: 25%;
-  z-index: 2;
+  left: 20px;
+  z-index: 3;
 }
 .logo img {
   width: 200px;
@@ -150,7 +181,7 @@ nav a {
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 0;
-  background-color: #d3d4d5;
+  background-color: #eee;
   overflow: hidden;
   font-size: 0;
   line-height: 20px;
@@ -174,10 +205,64 @@ nav a.isActive {
 
 
 
+/* --- Component: Hero image --- */
+.hero-image {
+  position: relative;
+  z-index: 4;
+  margin-top: -50px;
+  margin-bottom: -200px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scale(0.5);
+  transition: all 0.6s ease;
+}
+body.isLoaded .hero-image {
+  transform: scale(1);
+}
+
+
+
+/* --- Component: Diagram --- */
+.diagram,
+.diagram svg .stage1,
+.diagram svg .stage2,
+.diagram svg .stage3 {
+  position: relative;
+  transition: all 1s ease-in-out;
+  transform-origin: top center;
+}
+/* Show/hide */
+.diagram svg .stage1,
+.diagram svg .stage2,
+.diagram svg .stage3 {
+  opacity: 0;
+}
+.diagram.diagram--stage1 svg .stage1,
+.diagram.diagram--stage2 svg .stage2,
+.diagram.diagram--stage3 svg .stage3 {
+  opacity: 1;
+}
+/* Scale */
+.diagram.diagram--stage1 {
+  transform: scale(1.5) translateX(10%);
+  // stroke-width: 1.5;
+}
+.diagram.diagram--stage2 {
+  transform: scale(1) translateX(10%);
+  // stroke-width: 2;
+}
+.diagram.diagram--stage3 {
+  transform: scale(0.9);
+  // stroke-width: 3;
+}
+
+
 /* --- Component: Section --- */
 .section {
   position: relative;
-  padding: 10vw 0 20vw;
+  padding: 6vw 0 20vw;
 }
 .section .section__curve {
   position: absolute;
@@ -201,6 +286,20 @@ footer {
   background-color: #4a4e59;
   color: #fff;
 }
+footer a {
+  color: #59c183;
+}
+
+
+
+/* --- Content-specific: #verhaal --- */
+#verhaal {
+  padding-top: 0;
+}
+#verhaal .verhaal__text {
+  padding-top: 25vh;
+  padding-bottom: 25vh;
+}
 
 
 
@@ -208,5 +307,59 @@ footer {
 #intro {
   background-image: url('../images/intro_bg.svg');
   background-size: cover;
-  padding-top: 20vw;
+  padding-top: 15vw;
+  background-position: 0 100%;
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+body.isLoaded #intro {
+  background-position: 0;
+  opacity: 1;
+}
+
+
+
+
+/* --- Content-specific: #over-ons --- */
+#over-ons {
+  transform: translateY(100px);
+  transition: all 0.6s ease;
+}
+body.isLoaded #over-ons {
+  transform: translateY(0);
+}
+
+
+
+/* --- Content-specific: #inbetween (image) --- */
+#inbetween {
+  position: relative;
+  height: 50%;
+  height: 50vw;
+  background-image: url('../images/switch1-original.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+#inbetween:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  width: 100vw;
+  height: 300px;
+  height: 20vw;
+  background-image: url('../images/anticurve-green.svg');
+  background-size: 110%;
+  background-position: 3% 0;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+
+
+/* --- Content-specific: #contact --- */
+#contact {
+  padding-top: 3vw;
+  padding-bottom: 10vw;
 }

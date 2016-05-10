@@ -16,7 +16,40 @@ $(document).ready(function () {
     }
   });
 
+  // add isLoaded to page
+  $('body').addClass('isLoaded');
+
 });
+
+
+
+
+// Component: diagram
+$(document).ready(function () {
+  $('.diagram').stick_in_parent({
+    offset_top: 100
+  });
+});
+$(document).on(scrollevents, function() { diagramSwitch(); });
+
+function diagramSwitch() {
+  diagram_top = $('.diagram').offset().top;
+  st1_top = $('.verhaal__text__stage1').offset().top;
+  st2_top = $('.verhaal__text__stage2').offset().top;
+  st3_top = $('.verhaal__text__stage3').offset().top;
+  buffer = 400;
+
+  if( diagram_top > st3_top - buffer ) {
+    $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage2').addClass('diagram--stage3');
+    console.log($('.diagram').attr('class'));
+  } else if ( diagram_top > st2_top - buffer ) {
+    $('.diagram').removeClass('diagram--stage1').removeClass('diagram--stage3').addClass('diagram--stage2');
+    console.log($('.diagram').attr('class'));
+  } else if ( diagram_top > st1_top - buffer ) {
+    $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage3').addClass('diagram--stage1');
+    console.log($('.diagram').attr('class'));
+  }
+}
 
 
 
@@ -70,4 +103,26 @@ function contentLazyScroll() {
       // $(this).css('border', 'none');
     }
   });
+}
+
+
+
+
+// Component: Parallax
+$(document).on(scrollevents, function() { doParallax(); });
+
+function doParallax() {
+  $('[data-parallax]').each(function() {
+    var $bgobj = $(this); // assigning the object
+
+    $(window).scroll(function() {
+      var yPos = ($(window).scrollTop() / $bgobj.data('parallax')); 
+      
+      // Put together our final background position
+      var coords = '50% '+ yPos + 'px';
+
+      // Move the background
+      $bgobj.css({ backgroundPosition: coords });
+    }); 
+});
 }

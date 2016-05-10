@@ -4,8 +4,8 @@ Title: Intro
 
 Text: 
 
-HIP Containers bouwt zeecontainers 
-om tot een stukje van uw droom.
+<big><big>HIP Containers bouwt zeecontainers 
+om tot een stukje van uw droom.</big></big>
 
 
 (link: #verhaal text: Bekijk Hoe class: button button-primary u-mt20 u-mr20) (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20)

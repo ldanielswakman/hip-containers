@@ -4,6 +4,34 @@ Title: Tarieven
 
 Text: 
 
+<div class="row">
+<div class="col-xs-12 col-sm">
+
+<h3>Kantoor in je tuin</h3>
+<p>10ft voor € 7.500 excl. BTW<br />
+2.99m x 2.44m x 2.59m (b x l x h)<br />
+Korte bouw-/ levertijd<br />
+Plug & play opgeleverd</p>
+
+</div>
+<div class="col-xs-12 col-sm">
+
+<h3>Tuinkamer</h3>
+<p>10ft voor € 7.500 excl. BTW<br />
+2.99m x 2.44m x 2.59m (b x l x h)<br />
+Korte bouw-/ levertijd<br />
+Plug & play opgeleverd</p>
+</div>
+<div class="col-xs-12 col-sm">
+
+<h3>Tuinkamer XL</h3>
+<p>10ft voor € 7.500 excl. BTW<br />
+2.99m x 2.44m x 2.59m (b x l x h)<br />
+Korte bouw-/ levertijd<br />
+Plug & play opgeleverd</p>
+</div>
+</div>
+
 ----
 
-Bg: white
+Bg: lightestgreen

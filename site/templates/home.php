@@ -13,7 +13,7 @@
     <?
     switch ( $section->bg() ) {
       case 'green' : 
-        $bgcolor = '#59c183';
+        $bgcolor = '#59c183; color: #fff';
         break;
       case 'lightestgreen' :
         $bgcolor = '#f3f8f3';
@@ -30,15 +30,53 @@
 
       <? snippet('curve', ['color' => $bgcolor, 'key' => $section->num()]) ?>
 
-      <div class="row section__content">
-        <div class="col-sm-offset-2">
+      <? if($section->slug() == 'intro') :?>
+
+        <div class="row">
+          <div class="col-xs col-sm-5 col-sm-offset-1">
+            <h4 class="u-mb20"><?= $section->title() ?></h4>
+            <p><?= $section->text()->kirbytext() ?></p>
+          </div>
+          <div class="col-xs col-sm-5">
+            <figure class="hero-image">
+              <img src="<?= url('assets/images/switch1.jpg') ?>" alt="" />
+            </figure>
+          </div>
         </div>
-        <div class="col-xs col-sm-8">
-          <h4 class="u-mb20"><?= $section->title() ?></h4>
-          <p><?= $section->text()->kirbytext() ?></p>
+
+      <? elseif($section->slug() == 'verhaal') :?>
+
+        <div class="row">
+          <div class="col-xs col-sm-6">
+            <div class="diagram diagram--stage1">
+
+              <? snippet('diagram') ?>
+
+            </div>
+          </div>
+          <div class="verhaal__text col-xs col-sm-6">
+            <p><?= $section->text()->kirbytext() ?></p>
+          </div>
         </div>
-      </div>
+
+      <? else :?>
+
+        <div class="row section__content">
+          <div class="col-xs col-sm-8 col-sm-offset-2">
+            <h4 class="u-mb20"><?= $section->title() ?></h4>
+            <p><?= $section->text()->kirbytext() ?></p>
+          </div>
+        </div>
+
+      <? endif ?>
+
     </section>
+
+    <? if ($section->num() == $pages->visible()->count() - 1) :?>
+      <div id="inbetween" data-parallax="2">
+        <div class="image"></div>
+      </div>
+    <? endif ?>
 
   <? endforeach ?>
 

@@ -3,3 +3,25 @@ Title: Impressies
 ----
 
 Text: 
+
+<div class="row">
+<div class="col-xs-12 col-sm u-ph20">
+
+(image: switch1.jpg class: u-rounded-circle)
+
+</div>
+<div class="col-xs-12 col-sm u-ph20">
+
+(image: facade1.jpg class: u-rounded-circle)
+
+</div>
+<div class="col-xs-12 col-sm u-ph20">
+
+(image: switch2.jpg class: u-rounded-circle)
+
+</div>
+</div>
+
+----
+
+Bg: 

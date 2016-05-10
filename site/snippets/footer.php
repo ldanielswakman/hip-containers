@@ -1,11 +1,11 @@
   <footer>
 
     <div class="row u-pv20"> 
-      <div class="col-xs col-sm-offset-2">
+      <div class="col-sm-offset-2">
       </div>
       <div class="col-xs col-sm-8">
         <? // $site->copyright()->kirbytext() ?>
-        <a href="http://getkirby.com/made-with-kirby-and-love">Made with Kirby and <b>♥</b></a>
+        Designed and built by <a href="http://ldaniel.eu/" target="_blank">ldaniel.eu</a>.
       </div>
     </div>
 
