@@ -30,7 +30,7 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   font-weight: normal;
-  opacity: 0.25;
+  opacity: 0.5;
   text-align: center;
 }
 ::selection {
@@ -106,7 +106,7 @@ h4 {
 
 /* --- Base: Colours --- */
 .c-green {
-  color: #59c183;
+  color: #9bc4b1;
 }
 
 
@@ -127,7 +127,7 @@ figure {
   background-color: #4a4e59;
   border: 1px solid transparent;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 8px;
   line-height: 20px;
 }
 .button--outline {
@@ -198,7 +198,7 @@ nav ul a:hover {
   background-color: #b1b2b3;
 }
 nav a.isActive {
-  background-color: #59c183 !important;
+  background-color: #9bc4b1 !important;
   color: #fff !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
@@ -275,8 +275,8 @@ body.isLoaded .hero-image {
 }
 .section .section__curve .st0 {
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  -webkit-filter: drop-shadow( -5px -5px 5px #000 );
-  filter: drop-shadow( -5px -5px 5px #000 );
+  // -webkit-filter: drop-shadow( -5px -5px 5px #000 );
+  // filter: drop-shadow( -5px -5px 5px #000 );
 }
 
 
@@ -287,7 +287,7 @@ footer {
   color: #fff;
 }
 footer a {
-  color: #59c183;
+  color: #9bc4b1;
 }
 
 

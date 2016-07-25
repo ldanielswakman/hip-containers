@@ -13,7 +13,7 @@
     <?
     switch ( $section->bg() ) {
       case 'green' : 
-        $bgcolor = '#59c183; color: #fff';
+        $bgcolor = '#9bc4b1; color: #fff';
         break;
       case 'lightestgreen' :
         $bgcolor = '#f3f8f3';
