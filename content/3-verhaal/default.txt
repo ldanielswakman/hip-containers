@@ -5,15 +5,17 @@ Title: Verhaal
 Text: 
 
 <h3 class="verhaal__text__stage1"><span class="c-green">Stap 1:</span> Hergebruikte materialen</h3>
-Always Riding is an independent multi brand online store. Launched in 2008, it’s passion and purpose is to help riders all around the world choose and wear the most comfortable.
+De containers die wij verbouwen zijn gebruikte containers gemaakt van Cortenstaal. Zeecontainers gaan gemiddeld zo'n dertig jaar mee en worden bloot gesteld aan zout, wind en water. Ze kunnen na verloop van tijd gaan roesten als de verf beschadigd is, echter door het gebruik van Cortenstaal zullen ze niet doorroesten. Door materialen te gebruiken die afgedankt zijn zoals nieuwe maar overgebleven materialen van bouwprojecten dragen we ons steentje bij aan een duurzame wereld. 
 <div style="height: 50vh;"></div>
 
 <h3 class="verhaal__text__stage2"><span class="c-green">Stap 2:</span> Op maat gemaakt</h3>
-Always Riding is an independent multi brand online store. Launched in 2008, it’s passion and purpose is to help riders all around the world choose and wear the most comfortable.
-<div style="height: 50vh;"></div>
+Droomt u van een kantoor in uw tuin, een extra slaapkamer of een heerlijke buitenkeuken? Het kan allemaal van zeecontainers gemaakt worden!
+De meest gangbare maten van zeecontainers zijn 20 ft (6,06 m) en 40 ft (12,06 m). De breedte is 2,43 m. Iedere container kan ingekort worden tot de gewenste maat. Ook het koppelen van meerdere containers is mogelijk. <div style="height: 50vh;"></div>
 
-<h3 class="verhaal__text__stage3"><span class="c-green">Stap 3:</span> Volledige oplevering</h3>
-Always Riding is an independent multi brand online store. Launched in 2008, it’s passion and purpose is to help riders all around the world choose and wear the most comfortable.
+<h3 class="verhaal__text__stage3"><span class="c-green">Stap 3:</span> Kant en klaar en zo geplaatst! </h3>
+Uw tuinhuis, gastenverblijf of kantoor wordt gebouwd bij ons in de werkplaats. Daardoor is plaatsing over het algemeen snel gebeurd. 
+Zelfs het hijsen van uw container over uw huis heen is geen enkel probleem. Bij meerdere containers wordt de koppeling en het laatste stukje afwerking ter plaatse gedaan.
+Na het aansluiten van electra en water kunt u uw nieuwe  buitenkeuken meteen in gebruik nemen!
 
 ----
 
