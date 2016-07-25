@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Page
+title: Section
 pages: true
 files: true
 fields:
@@ -10,3 +10,4 @@ fields:
   text:
     label: Text
     type:  textarea
+  bg: background-color

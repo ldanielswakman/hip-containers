@@ -1,0 +1,8 @@
+label: Background color
+type: select
+default: white
+options:
+  white: White
+  lightestgreen: Lightest Green
+  green: Green
+  darkblue: Dark Blue
