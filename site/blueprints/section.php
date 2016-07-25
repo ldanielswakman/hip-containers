@@ -1,8 +1,10 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Section
-pages: true
+pages: false
 files: true
+options:
+  preview: parent
 fields:
   title:
     label: Title

@@ -1,13 +1,10 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Intro section
+title: Gallery section
 pages: false
 files: true
 options:
   preview: parent
-  status: false
-  template: false
-  delete: false
 fields:
   title:
     label: Title
@@ -16,8 +13,8 @@ fields:
     label: Text
     type:  textarea
   bg: background-color
-  carousel_images:
-    label: Carousel images
+  gallery_images:
+    label: Gallery images
     type: structure
     modalsize: small
     style: table

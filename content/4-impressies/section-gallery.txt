@@ -31,3 +31,26 @@ Text:
 ----
 
 Bg: darkblue
+
+----
+
+Gallery-images: 
+
+- 
+  carousel_image: facade1.jpg
+- 
+  carousel_image: facade1nw.jpg
+- 
+  carousel_image: switch2.jpg
+- 
+  carousel_image: facade1nw.jpg
+- 
+  carousel_image: switch1.jpg
+- 
+  carousel_image: facade1.jpg
+- 
+  carousel_image: switch2.jpg
+- 
+  carousel_image: facade1nw.jpg
+- 
+  carousel_image: facade1nw.jpg

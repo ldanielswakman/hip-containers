@@ -13,11 +13,9 @@ tot <em class="typed"></em></big></big>
 <p>een stukje van uw droom.^1000</p>
 </div>
 
-<br>
-Stelt u zich eens voor: een kantoor of gastenverblijf, een buitenkeuken of zorgunit in uw tuin. Zonder rotzooi in uw tuin, duurzaam, goed geprijsd en met een korte levertijd....
+<br >
 
-
-(link: #verhaal text: Bekijk Hoe class: button button-primary u-mt20 u-mr20) (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20)
+(link: #verhaal text: Bekijk hoe <i class="ion ion-android-arrow-down"></i> class: button button-primary u-mt20 u-mr20) (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20)
 
 ----
 
