@@ -4,6 +4,7 @@ scrollevents = 'ready scroll resize scrollstart scrollstop';
 // 'uncompononented' js
 $(document).ready(function () {
 
+
   // initiating smooth scroll
   $('a[href^="#"]').smoothScroll({
     afterScroll: function() {
@@ -16,8 +17,36 @@ $(document).ready(function () {
     }
   });
 
+
   // add isLoaded to page
   $('body').addClass('isLoaded');
+
+
+  // Owl carousel
+  $('.owl-carousel').each(function() {
+    $(this).owlCarousel({
+      items: 1,
+      loop: true,
+      nav: true,
+      navText: ["<i class='ion ion-chevron-left'></i>", "<i class='ion ion-chevron-right'></i>"],
+      lazyLoad : true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplaySpeed: 500,
+      // autoHeight : true,
+    });
+  });
+
+
+  // Typed
+  $(".typed").typed({
+    stringsElement: $('.typed-strings'),
+    typeSpeed: 30,
+    callback: function() {
+      $('.typed-cursor').fadeOut();
+    },
+  });
+
 
 });
 

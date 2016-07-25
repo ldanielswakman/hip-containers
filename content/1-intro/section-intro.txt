@@ -1,0 +1,37 @@
+Title: Intro
+
+----
+
+Text: 
+
+<big><big>HIP Containers bouwt zeecontainers om
+tot <em class="typed"></em></big></big>
+
+<div class="typed-strings u-hide">
+<p>^1000 tuinhuis of aanbouw... ^1000</p>
+<p>gastenverblijf of kantoor...^1000</p>
+<p>een stukje van uw droom.^1000</p>
+</div>
+
+<br>
+Stelt u zich eens voor: een kantoor of gastenverblijf, een buitenkeuken of zorgunit in uw tuin. Zonder rotzooi in uw tuin, duurzaam, goed geprijsd en met een korte levertijd....
+
+
+(link: #verhaal text: Bekijk Hoe class: button button-primary u-mt20 u-mr20) (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20)
+
+----
+
+Bg: green
+
+----
+
+Carousel-images: 
+
+- 
+  carousel_image: stork.jpg
+- 
+  carousel_image: switch2.jpg
+- 
+  carousel_image: construction1.jpg
+- 
+  carousel_image: facade1.jpg

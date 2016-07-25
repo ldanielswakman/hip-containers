@@ -38,9 +38,15 @@
             <p><?= $section->text()->kirbytext() ?></p>
           </div>
           <div class="col-xs col-sm-5">
-            <figure class="hero-image">
-              <img src="<?= url('assets/images/switch1.jpg') ?>" alt="" />
-            </figure>
+
+            <? if ($carousel = $section->carousel_images()->toStructure()) : ?>
+              <div class="owl-carousel">
+                <? foreach($carousel as $image) : ?>
+                  <figure class="hero-image"><img src="<?= $section->image($image)->url() ?>" alt="" /></figure>
+                <? endforeach ?>
+              </div>
+            <? endif ?>
+
           </div>
         </div>
 

@@ -12,13 +12,15 @@
   <?= css(array(
     'assets/css/flexboxgrid.min.css',
     'assets/css/ionicons.min.css',
+    'assets/css/owl.carousel.min.css',
     'assets/css/style.css',
-    'https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic',
+    // 'https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic',
   )) ?>
   <?= js(array(
     'assets/js/jquery-2.2.3.min.js',
     'assets/js/jquery.smooth-scroll.min.js',
     'assets/js/jquery.sticky-kit.min.js',
+    'assets/js/owl.carousel.min.js',
     'assets/js/typed.min.js',
     'assets/js/scripts.js',
   )) ?>
