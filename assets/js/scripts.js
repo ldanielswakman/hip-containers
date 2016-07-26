@@ -47,6 +47,10 @@ $(document).ready(function () {
     },
   });
 
+  $("[href='#offerte']").click(function(e) {
+    e.preventDefault();
+    toggleDialog('offer');
+  });
 
 });
 
@@ -80,6 +84,20 @@ function diagramSwitch() {
   }
 }
 
+
+
+
+// Dialog toggle
+function toggleDialog(id) {
+  if($('dialog#' + id)) {
+    $('dialog#' + id).toggleClass('isVisible');
+    $('#dialog_mask').toggleClass('isVisible');
+  }
+}
+function closeDialog() {
+    $('dialog').removeClass('isVisible');
+    $('#dialog_mask').removeClass('isVisible');
+}
 
 
 

@@ -6,6 +6,8 @@
 
 <?php snippet('nav') ?>
 
+<?php snippet('dialog-offer') ?>
+
 <main id="top">
 
   <? foreach ($pages->visible() as $key => $section) :?>
@@ -89,6 +91,30 @@
                 <div class="col-xs-6 col-sm-3<?= $class ?>">
                   <div class="gallery__image">
                     <figure class="u-rounded-circle"><img src="<?= $section->image($image)->url() ?>" /></figure>
+                  </div>
+                </div>
+              <? endforeach ?>
+            </div>
+          </div>
+        <? endif ?>
+
+      <? elseif($section->template() == 'section-boxes') :?>
+
+        <div class="row section__content">
+          <div class="col-xs col-sm-8 col-sm-offset-2">
+            <h4 class="u-mb20"><?= $section->title() ?></h4>
+            <div class="u-mb20"><?= $section->text()->kirbytext() ?></div>
+          </div>
+        </div>
+
+        <? if ($boxes = $section->boxes()->toStructure()) : ?>
+          <div class="boxes">
+            <div class="row">
+              <? foreach($boxes as $box) : ?>
+                <div class="col-xs-12 col-sm-4">
+                  <div class="boxes__box">
+                    <h3 class="c-green"><?= $box->title() ?></h3>
+                    <?= $box->text()->kirbytext() ?>
                   </div>
                 </div>
               <? endforeach ?>

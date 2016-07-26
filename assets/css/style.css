@@ -117,6 +117,9 @@ h4 {
 .c-green {
   color: #9bc4b1;
 }
+.c-white {
+  color: #fff;
+}
 
 
 
@@ -136,6 +139,8 @@ figure {
   background-color: #4a4e59;
   border: 1px solid transparent;
   color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
   border-radius: 8px;
   line-height: 20px;
 }
@@ -212,6 +217,55 @@ nav a.isActive {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
+
+
+/* --- Component: Dialog --- */
+dialog {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+  display: block;
+  width: 100%;
+  height: 50vh;
+  background-color: #9bc4b1;
+  border: none;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(250px);
+  -moz-transform: translateY(250px);
+  transform: translateY(250px);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+dialog.isVisible {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+}
+#dialog_mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #4a4e59;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+#dialog_mask.isVisible {
+  opacity: 0.75;
+  pointer-events: all;
+}
 
 
 /* --- Component: Owl Carousel --- */
@@ -337,16 +391,19 @@ nav a.isActive {
   position: relative;
   padding: 2vw 0 16vw;
 }
-.section .section__curve {
+.section .section__curve,
+dialog .section__curve {
   position: absolute;
   bottom: calc(100% - 1px);
   left: 0;
   width: 100vw;
 }
-.section .section__curve.section__curve--flipped {
+.section .section__curve.section__curve--flipped,
+dialog .section__curve.section__curve--flipped {
   transform: scaleX(-1);
 }
-.section .section__curve .st0 {
+.section .section__curve .st0,
+dialog .section__curve .st0 {
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   // -webkit-filter: drop-shadow( -5px -5px 5px #000 );
   // filter: drop-shadow( -5px -5px 5px #000 );
@@ -370,6 +427,25 @@ nav a.isActive {
 }
 .gallery__image {
   padding: 10px 20px;
+}
+
+
+
+/* --- Component: Boxes --- */
+.boxes {
+}
+.boxes .boxes__box {
+  background-color: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+.boxes .boxes__box ul {
+  margin-left: 20px;
+  line-height: 1.8rem;
 }
 
 

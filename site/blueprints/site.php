@@ -5,6 +5,8 @@ pages:
   template:
     - section
     - section-intro
+    - section-gallery
+    - section-boxes
 fields:
   title:
     label: Title

@@ -1,0 +1,41 @@
+Title: Tarieven
+
+----
+
+Text: Deze tekst kan eventueel gebruikt worden om de tarieven-boxen toe te lichten. Zo niet, dan kan-ie weg.
+
+----
+
+Bg: lightestgreen
+
+----
+
+Boxes: 
+
+- 
+  title: Kantoor in je tuin
+  text: |
+    * 10ft voor € 7.500 excl. BTW
+    * 2.99m x 2.44m x 2.59m (b x l x h)
+    * Korte bouw-/ levertijd
+    * Plug & play opgeleverd
+    
+    (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20 type-kantoor)
+- 
+  title: Tuinkamer
+  text: |
+    * 10ft voor € 7.500 excl. BTW
+    * 2.99m x 2.44m x 2.59m (b x l x h)
+    * Korte bouw-/ levertijd
+    * Plug & play opgeleverd
+    
+    (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20 type-tuinkamer)
+- 
+  title: Tuinkamer XL
+  text: |
+    * 10ft voor € 7.500 excl. BTW
+    * 2.99m x 2.44m x 2.59m (b x l x h)
+    * Korte bouw-/ levertijd
+    * Plug & play opgeleverd
+    
+    (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20 type-tuinkamer-xl)
