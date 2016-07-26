@@ -1,6 +1,6 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Repeatable boxes section
+title: Questions + Answers section
 pages: false
 files: true
 options:
@@ -12,21 +12,18 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
-    type: textarea
-    size: small
   bg: background-color
-  boxes:
+  items:
     label: Questions
     type: structure
     entry: >
-      <b>{{title}}</b><br>
-      <p>{{text}}</p>
+      <b>{{question}}</b><br>
+      <p>{{answer}}</p>
     fields:
-      title:
-        label: Title
+      question:
+        label: Question
         type: text
-      text:
-        label: Description
+      answer:
+        label: Answer
         type: textarea
+        size: small

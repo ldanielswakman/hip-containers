@@ -7,6 +7,7 @@ pages:
     - section-intro
     - section-gallery
     - section-boxes
+    - section-questions
 fields:
   title:
     label: Title
