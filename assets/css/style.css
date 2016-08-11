@@ -791,6 +791,12 @@ body.isLoaded #over-ons {
 
 
 /* --- Content-specific: #inbetween (image) --- */
+.section-image {
+  padding: 0 !important;
+}
+.section-image .section__curve {
+  display: none !important;
+}
 #inbetween {
   position: relative;
   height: 50%;

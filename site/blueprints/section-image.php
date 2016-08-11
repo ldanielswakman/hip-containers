@@ -5,16 +5,16 @@ pages: false
 files: true
 preview: parent
 options:
-  status: false
   template: false
 fields:
   title:
     label: Title
     type: text
     help: for your own use only, doesn't show up on page
-  image:
+  bgimage:
     label: Full width background image
     type: image
+    help: preferably minimum 1200px in width
   bg: background-color
   text:
     label: Text

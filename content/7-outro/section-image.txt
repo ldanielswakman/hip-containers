@@ -1,0 +1,13 @@
+Title: Outro
+
+----
+
+Text: 
+
+----
+
+Bg: darkblue
+
+----
+
+Bgimage: switch1-original.jpg

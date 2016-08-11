@@ -5,7 +5,6 @@ pages: false
 files: true
 preview: parent
 options:
-  status: false
   template: false
 fields:
   title:
