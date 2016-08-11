@@ -12,7 +12,7 @@
   <?= css(array(
     'assets/css/flexboxgrid.min.css',
     'assets/css/ionicons.min.css',
-    'assets/css/owl.carousel.min.css',
+    'assets/css/owl.carousel.css',
     'assets/css/style.css',
     // 'https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic',
   )) ?>

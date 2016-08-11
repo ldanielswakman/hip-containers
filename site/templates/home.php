@@ -2,7 +2,7 @@
 
 <? if ($logo = $site->logo()) : ?>
   <a href="#top" class="logo u-pv20">
-    <img src="<?= $site->image($logo)->url() ?>" alt="<?= $site->title()->html() ?>" />
+    <img src="<?= $site->image($logo)->url() ?>" alt="<?= $site->title()->html() ?>" class="logo__img-<?= $site->logo_size() ?>" />
   </a>
 <? endif ?>
 

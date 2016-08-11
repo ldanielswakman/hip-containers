@@ -100,6 +100,12 @@ hr {
 .u-pa40 {
   padding: 40px !important;
 }
+.u-pt20 {
+  padding-top: 20px !important;
+}
+.u-pb20 {
+  padding-bottom: 20px !important;
+}
 .u-pb40 {
   padding-bottom: 40px !important;
 }
@@ -166,8 +172,14 @@ hr {
   border-radius: 50%;
   overflow: hidden;
 }
+.u-opacity30 {
+  opacity: 0.3;
+}
 .u-opacity50 {
   opacity: 0.5;
+}
+.u-opacity70 {
+  opacity: 0.7;
 }
 
 
@@ -358,7 +370,17 @@ figure {
   z-index: 3;
 }
 .logo img {
+  max-width: 150px;
+  max-height: 200px;
+}
+.logo img.logo__img-small {
+  width: 80px;
+}
+.logo img.logo__img-medium {
   width: 120px;
+}
+.logo img.logo__img-large {
+  width: 150px;
 }
 
 
@@ -517,9 +539,6 @@ nav a.isActive {
 
 
 /* --- Component: Owl Carousel --- */
-.owl-carousel {
-  width: auto;
-}
 .owl-carousel-rounded {
   position: relative;
   z-index: 4;
@@ -557,6 +576,11 @@ nav a.isActive {
   width: 100%;
   height: 100%;
   pointer-events: none;
+}
+@media only screen and (max-width: 768px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
 }
 .owl-carousel .owl-nav .owl-prev,
 .owl-carousel .owl-nav .owl-next {
@@ -646,6 +670,11 @@ nav a.isActive {
   position: relative;
   padding: 2vw 0 16vw;
 }
+@media only screen and (max-width: 768px) {
+  .section {
+    padding: 4rem 0 4rem;
+  }
+}
 .section .section__curve,
 .dialog .section__curve {
   position: absolute;
@@ -662,6 +691,12 @@ nav a.isActive {
   // box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   // -webkit-filter: drop-shadow( -5px -5px 5px #000 );
   // filter: drop-shadow( -5px -5px 5px #000 );
+}
+@media only screen and (max-width: 768px) {
+  .section__content {
+    max-width: 100%;
+    overflow: hidden;
+  }
 }
 
 
@@ -754,7 +789,7 @@ footer a {
 
 
 /* --- Content-specific: #top (intro) --- */
-#intro {
+.section-intro {
   background-image: url('../images/intro_bg.svg');
   background-size: cover;
   padding-top: 15vw;
@@ -766,13 +801,22 @@ footer a {
   transition: all 0.6s ease;
   opacity: 0;
 }
-body.isLoaded #intro {
+@media only screen and (max-width: 768px) {
+  .section-intro {
+    padding-top: 8rem;
+  }
+}
+body.isLoaded .section-intro {
   background-position: 0;
+
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
   opacity: 1;
 }
 @media only screen and (min-width: 768px) {
-  #intro .owl-carousel-rounded {
-    margin-top: -50px;
+  .section-intro .owl-carousel-rounded {
+    margin-top: -70px;
     margin-bottom: -200px;
   }
 }

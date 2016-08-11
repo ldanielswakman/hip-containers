@@ -1,14 +1,14 @@
 <? if($section->slug() == 'verhaal') :?>
 
   <div class="row section__content">
-    <div class="col-xs col-sm-6">
+    <div class="col-xs-12 col-sm-6">
       <div class="diagram diagram--stage1">
 
         <? snippet('diagram') ?>
 
       </div>
     </div>
-    <div class="verhaal__text col-xs col-sm-6">
+    <div class="verhaal__text col-xs-12 col-sm-6">
       <p><?= $section->text()->kirbytext() ?></p>
     </div>
   </div>

@@ -22,3 +22,14 @@ fields:
   logo:
     label: Logo
     type: image
+    width: 2/3
+  logo_size:
+    label: Logo size
+    type: select
+    width: 1/3
+    default:
+      medium
+    options:
+      small: Small
+      medium: Medium
+      large: Large

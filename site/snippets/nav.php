@@ -1,7 +1,9 @@
 <nav>
   <ul>
     <? foreach ($pages->visible() as $section) :?>
-      <li><a href="#<?= $section->slug() ?>"><?= $section->title() ?></a></li>
+      <? if($section->template() != 'section-image') : ?>
+        <li><a href="#<?= $section->slug() ?>"><?= $section->title() ?></a></li>
+      <? endif ?>
     <? endforeach ?>
   </ul>
 </nav>

@@ -33,7 +33,6 @@ $(document).ready(function () {
       autoplay: true,
       autoplayTimeout: 4000,
       autoplaySpeed: 500,
-      // autoHeight : true,
     });
   });
 

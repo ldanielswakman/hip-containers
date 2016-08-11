@@ -11,3 +11,7 @@ Keywords:
 ----
 
 Logo: logo-alt2.svg
+
+----
+
+Logo-size: medium

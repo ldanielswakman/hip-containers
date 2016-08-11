@@ -1,9 +1,8 @@
 <div class="row">
-  <div class="col-xs col-sm-5 col-sm-offset-1">
-    <h4 class="u-mb20"><?= $section->template() ?></h4>
+  <div class="col-xs-12 col-sm-5 col-sm-offset-1">
     <p><?= $section->text()->kirbytext() ?></p>
   </div>
-  <div class="col-xs col-sm-5">
+  <div class="col-xs-12 col-sm-5 u-pt20">
 
     <? if ($carousel = $section->carousel_images()->toStructure()) : ?>
       <div class="owl-carousel owl-carousel-rounded">
