@@ -10,4 +10,4 @@ Keywords:
 
 ----
 
-Logo: logo-alt.svg
+Logo: logo-alt2.svg
