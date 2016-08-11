@@ -15,7 +15,7 @@ tot <em class="typed"></em></big></big>
 
 <br >
 
-(link: #verhaal text: Bekijk hoe <i class="ion ion-android-arrow-down"></i> class: button button-primary u-mt20 u-mr20) (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20)
+(link: #verhaal text: Bekijk hoe <i class="ion ion-android-arrow-down"></i> class: button button-primary u-mt20 u-mr20) (link: #offerte text: Vraag offerte aan class: button button--outline  u-mt20)
 
 ----
 

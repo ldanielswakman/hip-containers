@@ -1,16 +1,16 @@
-Title: Kirby Starterkit
+Title: HIP Containers
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: L Daniel Swakman
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: HIP Containers bouwt zeecontainers om tot een stukje van uw droom.
 
 ----
 
-Keywords: Kirby, CMS, file-based
+Keywords: 
 
 ----
 

@@ -50,7 +50,17 @@ $(document).ready(function () {
   $("[href='#offerte']").click(function(e) {
     e.preventDefault();
     toggleDialog('offer');
+    updateOfferPrice();
   });
+
+
+  // Sticky kit
+  $('.stick-in-parent').each(function() {
+    $offset = ($(this).attr('data-offset')) ? $(this).attr('data-offset') : 0;
+    console.log($offset);
+    $(this).stick_in_parent({ offset_top: $offset });
+  });
+
 
 });
 
@@ -89,13 +99,13 @@ function diagramSwitch() {
 
 // Dialog toggle
 function toggleDialog(id) {
-  if($('dialog#' + id)) {
-    $('dialog#' + id).toggleClass('isVisible');
+  if($('.dialog#' + id)) {
+    $('.dialog#' + id).toggleClass('isVisible');
     $('#dialog_mask').toggleClass('isVisible');
   }
 }
 function closeDialog() {
-    $('dialog').removeClass('isVisible');
+    $('.dialog').removeClass('isVisible');
     $('#dialog_mask').removeClass('isVisible');
 }
 
@@ -172,4 +182,58 @@ function doParallax() {
       $bgobj.css({ backgroundPosition: coords });
     }); 
 });
+}
+
+
+
+// Component: Question interaction
+$(document).ready(function() {
+
+  // offer question clicking
+  $('.question__button').click(function(e) {
+    e.preventDefault();
+    questionAction($(this));
+  });
+
+});
+
+function questionAction(obj) {
+  $question = obj.closest('.question');
+  $thisSelected = (obj.hasClass('question__button--selected'));
+  $questionSelected = ($question.hasClass('question--selected'));
+
+  if(!$thisSelected) {
+    $question.addClass('question--selected');
+    $question.find('.question__button').removeClass('question__button--selected');
+    obj.addClass('question__button--selected');
+
+    $value = obj.attr('data-value');
+    $question.find('.offer_form-field').val($value);
+  } else {
+    $question.find('.question__button').removeClass('question__button--selected');
+    $question.find('.offer_form-field').val('');
+    $question.removeClass('question--selected');
+  }
+
+  updateOfferPrice();
+}
+
+function updateOfferPrice() {
+
+  $form = $('#offer_form');
+  $price = 0;
+
+  $form.find('.offer_form-field').each(function(i) {
+    $val = parseInt($(this).val());
+    if ($val > 0) { $price += $val }
+  });
+
+  if ($price > 0) {
+    $('.offer__estimate').addClass('isActive');
+    $('#offer_price').html('€ ' + $price);
+  } else {
+    $('.offer__estimate').removeClass('isActive');
+    $('#offer_price').html('–');
+  }
+
 }
