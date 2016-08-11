@@ -3,11 +3,10 @@
 title: Questions + Answers section
 pages: false
 files: true
+preview: parent
 options:
-  preview: parent
   status: false
   template: false
-  delete: false
 fields:
   title:
     label: Title

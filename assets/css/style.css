@@ -175,6 +175,19 @@ hr {
 
 
 
+/* --- Base: Icons --- */
+.ion-15x {
+  font-size: 1.5em;
+}
+.ion-2x {
+  font-size: 2em;
+}
+.ion-3x {
+  font-size: 3em;
+}
+
+
+
 /* --- Base: Figure --- */
 figure {
   display: inline-block;
@@ -338,7 +351,7 @@ figure {
   z-index: 3;
 }
 .logo img {
-  width: 200px;
+  width: 120px;
 }
 
 
@@ -389,7 +402,53 @@ nav a.isActive {
   color: #fff !important;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-
+/* Menu on small screens */
+@media only screen and (max-width: 768px) {
+  nav {
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, transparent), color-stop(100%, rgba(74, 78, 89, 0.5)));
+    background: -webkit-linear-gradient(left, transparent, rgba(74, 78, 89, 0.5));
+    background: -moz-linear-gradient(left, transparent, rgba(74, 78, 89, 0.5));
+    background: -ms-linear-gradient(left, transparent, rgba(74, 78, 89, 0.5));
+    background: -o-linear-gradient(left, transparent, rgba(74, 78, 89, 0.5));
+    background: linear-gradient(to right, transparent, rgba(74, 78, 89, 0.5));
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateX(150px);
+    -moz-transform: translateX(150px);
+    transform: translateX(150px);
+  }
+  nav.isActive {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+  nav a {
+    padding: 0 10px;
+    font-size: 1em;
+    color: #4a4e59;
+  }
+}
+.nav-toggle {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .nav-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+  }
+  .nav-toggle .ion {
+    // text-shadow: 0 0 1px black;
+  }
+}
 
 
 /* --- Component: Dialog --- */
@@ -704,9 +763,11 @@ body.isLoaded #intro {
   background-position: 0;
   opacity: 1;
 }
-#intro .owl-carousel-rounded {
-  margin-top: -50px;
-  margin-bottom: -200px;
+@media only screen and (min-width: 768px) {
+  #intro .owl-carousel-rounded {
+    margin-top: -50px;
+    margin-bottom: -200px;
+  }
 }
 
 

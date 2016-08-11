@@ -57,7 +57,6 @@ $(document).ready(function () {
   // Sticky kit
   $('.stick-in-parent').each(function() {
     $offset = ($(this).attr('data-offset')) ? $(this).attr('data-offset') : 0;
-    console.log($offset);
     $(this).stick_in_parent({ offset_top: $offset });
   });
 
@@ -84,14 +83,12 @@ function diagramSwitch() {
 
   if( diagram_top > st3_top - buffer ) {
     $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage2').addClass('diagram--stage3');
-    console.log($('.diagram').attr('class'));
   } else if ( diagram_top > st2_top - buffer ) {
     $('.diagram').removeClass('diagram--stage1').removeClass('diagram--stage3').addClass('diagram--stage2');
-    console.log($('.diagram').attr('class'));
   } else if ( diagram_top > st1_top - buffer ) {
     $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage3').addClass('diagram--stage1');
-    console.log($('.diagram').attr('class'));
   }
+  // console.log($('.diagram').attr('class'));
 }
 
 
@@ -142,6 +139,22 @@ function navOnScroll() {
     $('nav a[href="#' + active_id + '"]').addClass('isActive');
   }
 }
+
+// toggle Nav for mobile
+function toggleMenu(state) {
+  if (state && state == 'close') {
+    $('.nav-toggle .ion').removeClass('ion-android-close').addClass('ion-navicon');
+    $('nav').removeClass('isActive');
+  } else {
+    $('.nav-toggle .ion').toggleClass('ion-navicon ion-android-close');
+    $('nav').toggleClass('isActive');
+  }
+}
+$(document).ready(function() {
+  $('nav a').click(function() {
+    toggleMenu('close');
+  });
+});
 
 
 

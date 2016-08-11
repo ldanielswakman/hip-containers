@@ -1,8 +1,10 @@
 <?php snippet('head') ?>
 
-<div class="logo u-pv20">
-  <img src="<?= url('assets/images/logo.svg') ?>" alt="" />
-</div>
+<? if ($logo = $site->logo()) : ?>
+  <a href="#top" class="logo u-pv20">
+    <img src="<?= $site->image($logo)->url() ?>" alt="<?= $site->title()->html() ?>" />
+  </a>
+<? endif ?>
 
 <?php snippet('nav') ?>
 

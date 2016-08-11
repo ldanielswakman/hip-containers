@@ -8,19 +8,17 @@ pages:
     - section-gallery
     - section-boxes
     - section-questions
+    - section-image
 fields:
   title:
     label: Title
     type:  text
-  author:
-    label: Author
-    type:  text
   description:
     label: Description
-    type:  textarea
+    type: textarea
   keywords:
     label: Keywords
-    type:  tags
-  copyright:
-    label: Copyright
-    type:  textarea
+    type: tags
+  logo:
+    label: Logo
+    type: image

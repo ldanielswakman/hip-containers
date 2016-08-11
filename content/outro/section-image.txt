@@ -1,0 +1,13 @@
+Title: Outro
+
+----
+
+Text: 
+
+----
+
+Bg: white
+
+----
+
+Image: switch1-original.jpg

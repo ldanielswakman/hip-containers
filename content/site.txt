@@ -2,10 +2,6 @@ Title: HIP Containers
 
 ----
 
-Author: L Daniel Swakman
-
-----
-
 Description: HIP Containers bouwt zeecontainers om tot een stukje van uw droom.
 
 ----
@@ -14,4 +10,4 @@ Keywords:
 
 ----
 
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Logo: logo-alt.svg

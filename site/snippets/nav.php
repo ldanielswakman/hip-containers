@@ -5,3 +5,4 @@
     <? endforeach ?>
   </ul>
 </nav>
+<a href="javascript:toggleMenu();" class="nav-toggle"><i class="ion ion-2x ion-navicon"></i></a>
