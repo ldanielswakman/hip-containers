@@ -792,6 +792,7 @@ body.isLoaded #over-ons {
 
 /* --- Content-specific: #inbetween (image) --- */
 .section-image {
+  margin-top: -8vw;
   padding: 0 !important;
 }
 .section-image .section__curve {
