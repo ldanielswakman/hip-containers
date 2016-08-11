@@ -1,6 +1,6 @@
 <? if($section->slug() == 'verhaal') :?>
 
-  <div class="row">
+  <div class="row section__content">
     <div class="col-xs col-sm-6">
       <div class="diagram diagram--stage1">
 

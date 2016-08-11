@@ -10,7 +10,12 @@ Stelt u zich eens voor: een kantoor of gastenverblijf, een buitenkeuken of zorgu
 
 Wij bouwen zeecontainers om tot tuinkantoor, atelier, zorgunit, aanbouw of tuinhuis.  Zelfs een woning is mogelijk. Creatief, vernieuwend, uniek, op maat, met een vleugje design, en betaalbaar.
 
-(link: # text: Lees meer + class: button button--outline u-mt20)
+(link: #readmore text: Lees meer + class: button button--outline u-mt20)
+
+<p class="extra">
+Wij bouwen zeecontainers om tot tuinkantoor, atelier, zorgunit, aanbouw of tuinhuis.  Zelfs een woning is mogelijk. Creatief, vernieuwend, uniek, op maat, met een vleugje design, en betaalbaar.
+Wij bouwen zeecontainers om tot tuinkantoor, atelier, zorgunit, aanbouw of tuinhuis.  Zelfs een woning is mogelijk. Creatief, vernieuwend, uniek, op maat, met een vleugje design, en betaalbaar.
+</p>
 
 ----
 

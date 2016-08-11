@@ -60,6 +60,11 @@ $(document).ready(function () {
     $(this).stick_in_parent({ offset_top: $offset });
   });
 
+  $('[href="#readmore"]').click(function(e) {
+    e.preventDefault();
+    $(this).closest('.section__content').find('.extra').addClass('isVisible');
+    $(this).addClass('u-hide');
+  });
 
 });
 
