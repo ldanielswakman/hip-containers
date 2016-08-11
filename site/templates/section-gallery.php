@@ -19,7 +19,7 @@
       ?>
         <div class="col-xs-6 col-sm-3<?= $class ?>">
           <div class="gallery__image">
-            <figure class="u-rounded-circle"><img src="<?= $section->image($image)->url() ?>" /></figure>
+            <figure class="u-rounded-circle"><img src="<?= thumb($section->image($image), array('width' => 250))->url() ?>" /></figure>
           </div>
         </div>
       <? endforeach ?>
