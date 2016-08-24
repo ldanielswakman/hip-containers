@@ -353,11 +353,45 @@ figure {
 .field:-ms-input-placeholder {  
   color: rgba(74, 78, 89, 0.4);
 }
+.field.error {
+  border-color: #e8893c;
+}
 .field--label {
   color: #9bc4b1;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   margin-left: 1rem;
+}
+.form__message {
+  position: relative;
+  padding: 0.5rem;
+  background-color: rgba(74, 78, 89, 0.05);
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.form__message:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  border: 0.5rem solid transparent;
+  border-top-color: rgba(74, 78, 89, 0.05);
+}
+.form__message.form__error {
+  background-color: #e8893c;
+  color: #fff;
+}
+.form__message.form__error:before {
+  border-top-color: #e8893c;
+}
+.form__message.form__success {
+  background-color: #9bc4b1;
+  color: #fff;
+}
+.form__message.form__success:before {
+  border-top-color: #9bc4b1;
 }
 
 
@@ -961,3 +995,13 @@ body.isLoaded #over-ons {
   line-height: 0.7rem;
   font-weight: normal;
 }
+
+
+
+/* --- Offer form: Uniform plugin code --- */
+.uniform__potty {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
