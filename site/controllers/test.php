@@ -9,14 +9,12 @@ return function($site, $pages, $page) {
     'actions' => [
       [
         '_action' => 'email',
-        'to' => 'me@example.com',
+        'to' => 'd.swakman@gmail.com',
         'sender' => 'info@my-domain.tld',
         'subject' => 'New message from the contact form'
       ]
     ]
   ]);
 
-  $test = 'testingggg';
-
-  return compact('form', 'test');
+  return compact('form');
 };
