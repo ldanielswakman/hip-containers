@@ -27,7 +27,7 @@
 
         <? if($offer_form_obj->hasMessage()): ?>
           <div class="form__message u-mt20 <? e($offer_form_obj->successful(), 'form__success', 'form__error') ?>">
-            <? $offer_form_obj->echoMessage() ?>
+            <?= str_replace("The log entry was successfully created.", "", $offer_form_obj->message()) ?>
           </div>
         <? endif ?>
 
