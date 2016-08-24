@@ -1,7 +1,7 @@
 <? $offer_form = $pages->find('offer-form') ?>
 
 <div class="dialog-wrapper">
-  <div id="offer" class="dialog u-pb40 u-pt20 isVisible">
+  <div id="offer" class="dialog u-pb40 u-pt20">
 
     <? snippet('curve', ['color' => '#fff']) ?>
 

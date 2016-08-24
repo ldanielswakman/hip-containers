@@ -1,4 +1,5 @@
 <? $color = (isset($color)) ? $color : '#fff' ?>
+<? $key = (isset($key)) ? $key : 0 ?>
 <svg version="1.1" id="curve_<?= $key ?>" class="section__curve <?= ($key % 2 != 0) ? 'section__curve--flipped' : '' ?>" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
      viewBox="0 0 1400 138.2" style="enable-background:new 0 0 1400 138.2;" xml:space="preserve">
   <style type="text/css">
