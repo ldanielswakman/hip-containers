@@ -61,7 +61,7 @@ fields:
       Name field – <span style="font-weight: normal;">title ...</span>
     type: text
     icon: user
-    help: (Leave empty to hide in the form)
+    help: (Required)
     width: 1/3
   name_placeholder:
     label: > 
@@ -73,7 +73,7 @@ fields:
       Email field – <span style="font-weight: normal;">title ...</span>
     type: text
     icon: envelope
-    help: (Leave empty to hide in the form)
+    help: (Required)
     width: 1/3
   email_placeholder:
     label: > 

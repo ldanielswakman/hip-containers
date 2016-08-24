@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
   // initiating smooth scroll
-  $('a[href^="#"]').smoothScroll({
+  $('a[href^="#"]').not('[href="#offerte"]').smoothScroll({
     afterScroll: function() {
       if(history.pushState) {
         history.pushState(null, null, $(this).attr('href'));
@@ -47,9 +47,14 @@ $(document).ready(function () {
   });
 
   $("[href='#offerte']").click(function(e) {
-    // e.preventDefault();
+    e.preventDefault();
     toggleDialog('offerte');
+    window.location.hash = 'offerte';
     updateOfferPrice();
+    $('.dialog-wrapper, .dialog').offset().top = 0;
+    setTimeout(function() {
+      $('.dialog-wrapper, .dialog').offset().top = 0;
+    }, 300);
   });
 
   if(window.location.hash.indexOf('offerte') == 1) {
@@ -72,6 +77,17 @@ $(document).ready(function () {
 
 });
 
+$(window).scroll(function() {
+  console.log('window: ' + $(window).scrollTop() + 'px');
+});
+
+$('.dialog').scroll(function() {
+  console.log('dialog: ' + $('.dialog').offset().top + 'px');
+});
+$('.dialog-wrapper').scroll(function() {
+  console.log('wrapper: ' + $('.dialog-wrapper').offset().top + 'px');
+});
+
 
 
 
@@ -84,20 +100,21 @@ $(document).ready(function () {
 $(document).on(scrollevents, function() { diagramSwitch(); });
 
 function diagramSwitch() {
-  diagram_top = $('.diagram').offset().top;
-  st1_top = $('.verhaal__text__stage1').offset().top;
-  st2_top = $('.verhaal__text__stage2').offset().top;
-  st3_top = $('.verhaal__text__stage3').offset().top;
-  buffer = 400;
+  if($('.diagram').length > 0) {
+    diagram_top = $('.diagram').offset().top;
+    st1_top = $('.verhaal__text__stage1').offset().top;
+    st2_top = $('.verhaal__text__stage2').offset().top;
+    st3_top = $('.verhaal__text__stage3').offset().top;
+    buffer = 400;
 
-  if( diagram_top > st3_top - buffer ) {
-    $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage2').addClass('diagram--stage3');
-  } else if ( diagram_top > st2_top - buffer ) {
-    $('.diagram').removeClass('diagram--stage1').removeClass('diagram--stage3').addClass('diagram--stage2');
-  } else if ( diagram_top > st1_top - buffer ) {
-    $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage3').addClass('diagram--stage1');
+    if( diagram_top > st3_top - buffer ) {
+      $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage2').addClass('diagram--stage3');
+    } else if ( diagram_top > st2_top - buffer ) {
+      $('.diagram').removeClass('diagram--stage1').removeClass('diagram--stage3').addClass('diagram--stage2');
+    } else if ( diagram_top > st1_top - buffer ) {
+      $('.diagram').removeClass('diagram--stage2').removeClass('diagram--stage3').addClass('diagram--stage1');
+    }
   }
-  // console.log($('.diagram').attr('class'));
 }
 
 
@@ -109,11 +126,13 @@ function toggleDialog(id) {
     // $(!$('.dialog#' + id).hasClass('isVisible')) {
     //   $('.dialog-wrapper').
     // }
+    $('.dialog-wrapper').toggleClass('isVisible');
     $('.dialog#' + id).toggleClass('isVisible');
     $('#dialog_mask').toggleClass('isVisible');
   }
 }
 function closeDialog() {
+    $('.dialog-wrapper').removeClass('isVisible');
     $('.dialog').removeClass('isVisible');
     $('#dialog_mask').removeClass('isVisible');
 }
@@ -220,6 +239,15 @@ $(document).ready(function() {
     questionAction($(this));
   });
 
+  $('.question').each(function() {
+    $val = $(this).find('.offer_form-field').val();
+    if($(this).find('.question__button[data-value="' + $val + '"]').length > 0) {
+      $(this).find('.question__button').removeClass('question__button--selected');
+      $(this).find('.question__button[data-value="' + $val + '"]').addClass('question__button--selected');
+      $(this).addClass('question--selected');
+    }
+  });
+
 });
 
 function questionAction(obj) {
@@ -256,6 +284,7 @@ function updateOfferPrice() {
   if ($price > 0) {
     $('.offer__estimate').addClass('isActive');
     $('#offer_price').html('€ ' + $price);
+    $('input[name="richtprijs"]').val($price);
   } else {
     $('.offer__estimate').removeClass('isActive');
     $('#offer_price').html('–');

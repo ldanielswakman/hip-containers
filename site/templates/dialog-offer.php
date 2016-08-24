@@ -1,37 +1,55 @@
 <? $offer_form = $pages->find('offer-form') ?>
 
 <div class="dialog-wrapper">
-  <div id="offer" class="dialog u-pb40 u-pt20">
 
-    <? snippet('curve', ['color' => '#fff']) ?>
+  <div class="u-relative" style="height: 1000px;">
 
-    <form id="offer_form" action="">
+    <div class="dialog-spacer"></div>
+
+    <form id="offerte" class="dialog u-pv40 u-pt20" action="<?= $site->uri() ?>#offerte" method="post">
+
+      <? // snippet('curve', ['color' => '#fff']) ?>
 
       <div class="row">
-        <div class="col-xs-12 col-md-8 col-md-offset-2 u-mb20">
+        <div class="col-xs-12 col-md-10 col-md-offset-1 u-mb20">
 
-          <div class="u-flex-center u-flex-space-between stick-in-parent">
+          <div class="u-flex-center u-flex-space-between">
 
             <h2 class="c-green"><?= $offer_form->title() ?></h2>
 
+            <? if($offer_form_obj->successful() == false): ?>
             <div class="offer__estimate">
               <h4>RICHTPRIJS</h4>
               <strong id="offer_price">&mdash;</strong>
+                <input id="offer_price" type="hidden" name="richtprijs" value="<? $offer_form_obj->echoValue('richtprijs') ?>" />
             </div>
+            <? endif ?>
 
           </div>
 
+          <? if($offer_form_obj->hasMessage()): ?>
+            <div class="form__message u-mt20 <? e($offer_form_obj->successful(), 'form__success', 'form__error') ?>">
+              <? $offer_form_obj->echoMessage() ?>
+            </div>
+          <? endif ?>
+
+          <? if($offer_form_obj->successful()): ?>
+            <a href="javascript:closeDialog()" class="button button--outline">Sluit venster</a>
+          <? endif?>
+
         </div>
-        <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+        <? if($offer_form_obj->successful() == false): ?>
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
 
           <? // Questions ?>
           <? foreach ($offer_form->questions()->toStructure() as $question) : ?>
 
             <? $col = (strlen($question->answer_1_text()) > 10) ? 3 : 2 ?>
 
-            <div class="question" id="maat">
-              <label class="field--label"><?= strtoupper($question->title()) ?></label>
-              <input type="hidden" class="offer_form-field" name="<?= strtolower($question->title()) ?>" value="">
+            <div class="question" id="<?= strtolower($question->title()) ?>">
+              <label for="<?= strtolower($question->title()) ?>" class="field--label"><?= strtoupper($question->title()) ?></label>
+              <input type="hidden" class="offer_form-field" name="<?= strtolower($question->title()) ?>" value="<? $offer_form_obj->echoValue(strtolower($question->title())) ?>">
               <div class="question__box u-mb10">
                 <div class="row">
                   <div class="col-xs-12 col-sm-<?= 12 - 2 * $col ?> question__box--content">
@@ -50,78 +68,78 @@
           <? endforeach ?>
 
           <? if($offer_form->message_title()->isNotEmpty() && $offer_form->message_placeholder()->isNotEmpty()) : ?>
-            <label class="field--label"><?= strtoupper($offer_form->message_title()) ?></label>
-            <textarea name="description" class="field u-mb20" placeholder="<?= $offer_form->message_placeholder() ?>" rows="4"></textarea>
+            <label for="opmerkingen" class="field--label"><?= strtoupper($offer_form->message_title()) ?></label>
+            <textarea name="opmerkingen" class="field u-mb20" placeholder="<?= $offer_form->message_placeholder() ?>" rows="4"><? $offer_form_obj->echoValue('opmerkingen') ?></textarea>
           <? endif ?>
 
           <div class="row row-internalpadding">
-            <? if($offer_form->name_title()->isNotEmpty() && $offer_form->name_placeholder()->isNotEmpty()) : ?>
-              <div class="col-xs-12 col-sm-6">
-                <label class="field--label"><?= strtoupper($offer_form->name_title()) ?></label>
-                <input name="name" type="text" class="field u-mb20" placeholder="<?= $offer_form->name_placeholder() ?>" required>
-              </div>
-            <? endif ?>
-            <? if($offer_form->email_title()->isNotEmpty() && $offer_form->email_placeholder()->isNotEmpty()) : ?>
-              <div class="col-xs-12 col-sm-6">
-                <label class="field--label"><?= strtoupper($offer_form->email_title()) ?></label>
-                <input name="email" type="email" class="field u-mb20" placeholder="<?= $offer_form->email_placeholder() ?>" required>
-              </div>
-            <? endif ?>
+            <? // if($offer_form->name_title()->isNotEmpty() && $offer_form->name_placeholder()->isNotEmpty()) : ?>
+            <? $name_title = ($offer_form->name_title()->isNotEmpty()) ? $offer_form->name_title() : 'Naam'; ?>
+            <? $name_placeholder = ($offer_form->name_placeholder()->isNotEmpty()) ? $offer_form->name_placeholder() : 'Uw naam'; ?>
+            <div class="col-xs-12 col-sm-6">
+              <label for="naam" class="field--label required"><?= strtoupper($name_title) ?></label>
+              <input name="naam" type="text" class="field<? e($offer_form_obj->hasError('naam'), ' error') ?> u-mb20" placeholder="<?= $name_placeholder ?>" value="<?= $offer_form_obj->echoValue('naam') ?>" required>
+            </div>
+            <? // endif ?>
+            <? // if($offer_form->email_title()->isNotEmpty() && $offer_form->email_placeholder()->isNotEmpty()) : ?>
+            <? $email_title = ($offer_form->email_title()->isNotEmpty()) ? $offer_form->email_title() : 'Naam'; ?>
+            <? $email_placeholder = ($offer_form->email_placeholder()->isNotEmpty()) ? $offer_form->email_placeholder() : 'Uw naam'; ?>
+            <div class="col-xs-12 col-sm-6">
+              <label for="_from" class="field--label required"><?= strtoupper($email_title) ?></label>
+              <input name="_from" type="email" class="field<? e($offer_form_obj->hasError('_from'), ' error') ?> u-mb20" placeholder="<?= $email_placeholder ?>" value="<?= $offer_form_obj->echoValue('_from') ?>" required>
+            </div>
+            <? // endif ?>
           </div>
+
+          <input type="checkbox" class="field--checkbox" name="_receive_copy" id="receive-copy" <?php e($offer_form_obj->value('_receive_copy'), ' checked')?>/>
+          <label for="receive-copy">Stuur een kopie van deze offerte naar mij</label>
+          <br><br>
 
           <div class="u-flex-center u-flex-space-between">
             <a href="#" onclick="closeDialog()" class="button button--outline"><i class="ion ion-android-arrow-back"></i> Terug</a>
-            <button type="submit" class="button button--primary button--large">Verstuur</button>
+            <button type="submit" name="_submit" value="<?= $offer_form_obj->token() ?>" class="button button--primary button--large"<? e($offer_form_obj->successful(), ' disabled') ?>>Verstuur</button>
           </div>
 
           <script>
-            $('#offer_form [type="submit"]').click(function(e) {
+            // $('#offer_form [type="submit"]').click(function(e) {
 
-              var error_free = true;
-              $('#offer_form input[required]').each(function() {
-                if($(this).val().length <= 0) { error_free = false; }
-              });
+            //   var error_free = true;
+            //   $('#offer_form input[required]').each(function() {
+            //     if($(this).val().length <= 0) { error_free = false; }
+            //   });
 
-              if (error_free) {
+            //   if (error_free) {
 
-                e.preventDefault();
+            //     e.preventDefault();
 
-                $(this).addClass('isWorking');
+            //     $(this).addClass('isWorking');
 
-                setTimeout(function() {
-                  $('#offer_form [type="submit"]').toggleClass('isWorking isComplete');
-                }, 1000);
+            //     setTimeout(function() {
+            //       $('#offer_form [type="submit"]').toggleClass('isWorking isComplete');
+            //     }, 1000);
 
-                setTimeout(function() {
-                  closeDialog();
-                  $('#offer_form [type="submit"]').removeClass('isWorking isComplete');
-                  $('#offer_form .question').removeClass('question--selected');
-                  $('#offer_form .question__button').removeClass('question__button--selected');
-                  $('#offer_form .offer_form-field').val('');
-                  updateOfferPrice();
-                }, 2000);
+            //     setTimeout(function() {
+            //       closeDialog();
+            //       $('#offer_form [type="submit"]').removeClass('isWorking isComplete');
+            //       $('#offer_form .question').removeClass('question--selected');
+            //       $('#offer_form .question__button').removeClass('question__button--selected');
+            //       $('#offer_form .offer_form-field').val('');
+            //       updateOfferPrice();
+            //     }, 2000);
 
-              }
+            //   }
 
-            });
+            // });
           </script>
 
         </div>
+        <? endif ?>
       </div>
 
-    </form>
+    </form><!-- /.dialog -->
 
-    <div class="u-pv40">
-    </div>
+    <div onclick="closeDialog();" class="" id="dialog_mask"></div>
 
-  </div><!-- /.dialog -->
-
-  <!-- <section class="section" style="background-color: #f3f8f3;">
-
-    <? // snippet('curve', ['color' => '#f3f8f3']) ?>
-
-  </section> -->
+  </div>
 
 </div>
-
-<div onclick="closeDialog();" class="" id="dialog_mask"></div>
