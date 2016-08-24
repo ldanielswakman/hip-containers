@@ -374,24 +374,24 @@ figure {
 .form__message:before {
   content: "";
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 1rem;
   border: 0.5rem solid transparent;
-  border-top-color: rgba(74, 78, 89, 0.05);
+  border-bottom-color: rgba(74, 78, 89, 0.05);
 }
 .form__message.form__error {
   background-color: #e8893c;
   color: #fff;
 }
 .form__message.form__error:before {
-  border-top-color: #e8893c;
+  border-bottom-color: #e8893c;
 }
 .form__message.form__success {
   background-color: #9bc4b1;
   color: #fff;
 }
 .form__message.form__success:before {
-  border-top-color: #9bc4b1;
+  border-bottom-color: #9bc4b1;
 }
 
 
@@ -715,6 +715,7 @@ nav a.isActive {
   bottom: calc(100% - 1px);
   left: 0;
   width: 100vw;
+  pointer-events: none;
 }
 .section .section__curve.section__curve--flipped,
 .dialog .section__curve.section__curve--flipped {

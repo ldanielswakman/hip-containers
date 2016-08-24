@@ -47,10 +47,15 @@ $(document).ready(function () {
   });
 
   $("[href='#offerte']").click(function(e) {
-    e.preventDefault();
-    toggleDialog('offer');
+    // e.preventDefault();
+    toggleDialog('offerte');
     updateOfferPrice();
   });
+
+  if(window.location.hash.indexOf('offerte') == 1) {
+    toggleDialog('offerte');
+    updateOfferPrice();
+  }
 
 
   // Sticky kit
@@ -101,6 +106,9 @@ function diagramSwitch() {
 // Dialog toggle
 function toggleDialog(id) {
   if($('.dialog#' + id)) {
+    // $(!$('.dialog#' + id).hasClass('isVisible')) {
+    //   $('.dialog-wrapper').
+    // }
     $('.dialog#' + id).toggleClass('isVisible');
     $('#dialog_mask').toggleClass('isVisible');
   }
@@ -206,7 +214,7 @@ function doParallax() {
 // Component: Question interaction
 $(document).ready(function() {
 
-  // offer question clicking
+  // offerte question clicking
   $('.question__button').click(function(e) {
     e.preventDefault();
     questionAction($(this));
@@ -237,7 +245,7 @@ function questionAction(obj) {
 
 function updateOfferPrice() {
 
-  $form = $('#offer_form');
+  $form = $('#offerte');
   $price = 0;
 
   $form.find('.offer_form-field').each(function(i) {
