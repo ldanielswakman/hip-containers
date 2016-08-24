@@ -1,0 +1,83 @@
+Title: Vraag offerte aan
+
+----
+
+Text: 
+
+----
+
+Questions: 
+
+- 
+  title: Maat
+  question: 'Wilt u een **20ft** of een **40ft** gebruikte container?'
+  answer_1_text: '20ft <small>(6,06m x 2,43m)</small>'
+  answer_1_price: "1000"
+  answer_2_text: '40ft <small>(12,06m x 2,43m)</small>'
+  answer_2_price: "2500"
+- 
+  title: Afwerking
+  question: 'Wilt u de container aan de buitenzijde **gespoten** in een RAL kleur (geen metallics)?'
+  answer_1_text: Ja
+  answer_1_price: "400"
+  answer_2_text: Nee
+  answer_2_price: "0"
+- 
+  title: Deur
+  question: 'Wilt u een kunststof **openslaande deur** <small class="u-opacity50">(1,80m x 2,10m)</small> aan de lange zijde in de container?'
+  answer_1_text: Ja
+  answer_1_price: "250"
+  answer_2_text: Nee
+  answer_2_price: "0"
+- 
+  title: Raam
+  question: 'Wilt u op de kopse zijde van de container een **raam** <small class="u-opacity50">(2,20 m * 2,20 m)</small>?'
+  answer_1_text: Ja
+  answer_1_price: "1000"
+  answer_2_text: Nee
+  answer_2_price: "0"
+- 
+  title: Isolatie
+  question: 'Wilt u de container **geïsoleerd** aan de binnenzijde?'
+  answer_1_text: Ja
+  answer_1_price: "1000"
+  answer_2_text: Nee
+  answer_2_price: "0"
+- 
+  title: Licht
+  question: 'Wilt u 4 **lichtpunten** in de container?'
+  answer_1_text: Ja
+  answer_1_price: "500"
+  answer_2_text: Nee
+  answer_2_price: "0"
+- 
+  title: Water
+  question: 'Wilt u een **wateraan- en afvoer** in de container?'
+  answer_1_text: Ja
+  answer_1_price: "250"
+  answer_2_text: Nee
+  answer_2_price: "0"
+
+----
+
+Message-title: Opmerkingen
+
+----
+
+Message-placeholder: Hallo, ik wil graag een offerte voor een container op maat...
+
+----
+
+Name-title: Naam
+
+----
+
+Name-placeholder: Uw naam
+
+----
+
+Email-title: Email
+
+----
+
+Email-placeholder: Uw email

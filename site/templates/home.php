@@ -8,7 +8,7 @@
 
 <?php snippet('nav') ?>
 
-<?php snippet('dialog-offer') ?>
+<?php snippet('../templates/dialog-offer') ?>
 
 <main id="top">
 
