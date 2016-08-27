@@ -9,13 +9,13 @@
     <? // snippet('curve', ['color' => '#fff']) ?>
 
     <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 u-mb20">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
 
         <div class="u-flex-center u-flex-space-between">
 
           <h2 class="c-green"><?= $offer_form->title() ?></h2>
 
-          <? if($offer_form_obj->successful() == false): ?>
+          <? if(isset($show_estimate)): ?>
           <div class="offer__estimate">
             <h4>RICHTPRIJS</h4>
             <strong id="offer_price">&mdash;</strong>
@@ -27,18 +27,36 @@
 
         <? if($offer_form_obj->hasMessage()): ?>
           <div class="form__message u-mt20 <? e($offer_form_obj->successful(), 'form__success', 'form__error') ?>">
-            <?= str_replace("The log entry was successfully created.", "", $offer_form_obj->message()) ?>
+            <?
+            $message_str = '';
+            // if not in debug mode, and if successful, loops and outputs only single string
+            if(c::get('debug') !== true) {
+              $messages = explode('.', $offer_form_obj->message());
+              foreach ($messages as $message) {
+                if(strpos($message, ' succesvol verzonden') !== false) {
+                  $message_str .= $message . '.';
+                  break;
+                }
+              } 
+            }
+            if (strlen($message_str) < 1) {
+              $message_str = $offer_form_obj->message();
+            }
+            echo $message_str;
+            ?>
           </div>
         <? endif ?>
 
         <? if($offer_form_obj->successful()): ?>
-          <a href="javascript:closeDialog()" class="button button--outline">Sluit venster</a>
+          <div>
+            <a href="javascript:closeDialog()" class="button button--outline">Sluit venster</a>
+          </div>
         <? endif?>
 
       </div>
 
       <? if($offer_form_obj->successful() == false): ?>
-      <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="col-xs-12 col-md-10 col-md-offset-1 u-mt20">
 
         <? // Questions ?>
         <? foreach ($offer_form->questions()->toStructure() as $question) : ?>

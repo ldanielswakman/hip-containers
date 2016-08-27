@@ -398,7 +398,8 @@ figure {
 }
 .form__message {
   position: relative;
-  padding: 0.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
   background-color: rgba(74, 78, 89, 0.05);
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;

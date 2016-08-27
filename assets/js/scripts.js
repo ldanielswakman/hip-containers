@@ -77,17 +77,6 @@ $(document).ready(function () {
 
 });
 
-$(window).scroll(function() {
-  console.log('window: ' + $(window).scrollTop() + 'px');
-});
-
-$('.dialog').scroll(function() {
-  console.log('dialog: ' + $('.dialog').offset().top + 'px');
-});
-$('.dialog-wrapper').scroll(function() {
-  console.log('wrapper: ' + $('.dialog-wrapper').offset().top + 'px');
-});
-
 
 
 

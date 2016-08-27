@@ -1,2 +1,11 @@
+
+# kirby folders
 /site/accounts
+/site/config
+/site/cache
+
+# uniform email log
+email.log
+
+# sublime workspace
 hip-containers.sublime-workspace
