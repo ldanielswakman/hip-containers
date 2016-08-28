@@ -15,7 +15,6 @@
         <div class="offer__estimate">
           <h4>RICHTPRIJS</h4>
           <strong id="offer_price">&mdash;</strong>
-            <input id="offer_price" type="hidden" name="richtprijs" value="<? $offer_form_obj->echoValue('richtprijs') ?>" />
         </div>
         <? endif ?>
 
@@ -78,6 +77,8 @@
         </div>
 
       <? endforeach ?>
+
+      <input id="offer_price" type="hidden" name="richtprijs" value="<? $offer_form_obj->echoValue('richtprijs') ?>" />
 
       <? if($offer_form->message_title()->isNotEmpty() && $offer_form->message_placeholder()->isNotEmpty()) : ?>
         <label for="opmerkingen" class="field--label"><?= strtoupper($offer_form->message_title()) ?></label>

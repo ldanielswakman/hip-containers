@@ -151,6 +151,9 @@ function clickFormDialog(href) {
   $target = href.replace('#', '');
   toggleDialog($target);
 
+  // for offer form
+  updateOfferPrice();
+
   $.smoothScroll({
     scrollElement: $('.dialog-wrapper'),
     scrollTarget: '#top',
@@ -292,7 +295,7 @@ function questionAction(obj) {
     $question.removeClass('question--selected');
   }
 
-  // updateOfferPrice();
+  updateOfferPrice();
 }
 
 function updateOfferPrice() {

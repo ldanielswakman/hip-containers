@@ -43,14 +43,14 @@ return function($site, $pages, $page) {
         'to' => $site->user('daniel')->email(),
         'sender' => 'info@hipcontainers.nl',
         'subject' => '[' . $site->title()->html() . '] Bericht: {naam}',
-        'snippet' => 'email-offer'
+        'snippet' => 'email-contact'
       ],
       [
         '_action' => 'email',
         'to' => $site->user('nathal')->email(),
         'sender' => 'info@hipcontainers.nl',
         'subject' => '[' . $site->title()->html() . '] Bericht: {naam}',
-        'snippet' => 'email-offer'
+        'snippet' => 'email-contact'
       ],
     ]
   ]);
