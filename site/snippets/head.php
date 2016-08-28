@@ -49,5 +49,7 @@
   <?= css($css_assets) ?>
   <?= js($js_assets) ?>
 
+  <link id="favicon" rel="shortcut icon" href="<?= url('assets/images/favicon.ico') ?>">
+
 </head>
 <body>
