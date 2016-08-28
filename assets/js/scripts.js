@@ -18,6 +18,31 @@ $(document).ready(function () {
   });
 
 
+  // initiating magnific popup
+  $('.gallery__image').magnificPopup({
+    type: 'image',
+    mainClass: 'mfp-with-zoom',
+    zoom: {
+      enabled: true,
+      duration: 300,
+      easing: 'ease-in-out',
+      opener: function(openerElement) {
+        return openerElement.is('img') ? openerElement : openerElement.find('img');
+      }
+    },
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1], // Will preload 0 - before current, and 1 after the current image
+      // arrowMarkup: '<i title="%title%" class="ion ion-arrow-%dir%-b></i>',
+      arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"><i class="ion ion-chevron-%dir%"></i></button>',
+      tPrev: 'Vorige',
+      tNext: 'Volgende',
+      tCounter: '<span class="mfp-counter">%curr% van %total%</span>',
+    },
+  });
+
+
   // add isLoaded to page
   $('body').addClass('isLoaded');
 
