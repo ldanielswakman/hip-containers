@@ -19,4 +19,4 @@ Na het aansluiten van electra en water kunt u uw nieuwe  buitenkeuken meteen in 
 
 ----
 
-Bg: lightestgreen
+Bg: green

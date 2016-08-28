@@ -6,7 +6,7 @@ Text: Deze tekst kan eventueel gebruikt worden om de tarieven-boxen toe te licht
 
 ----
 
-Bg: lightestgreen
+Bg: green
 
 ----
 
