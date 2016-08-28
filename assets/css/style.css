@@ -191,11 +191,47 @@ hr {
 
 
 /* --- Base: Colours --- */
+.c-white {
+  color: #fff;
+}
+.c-lightestgreen {
+  color: #f3f8f3;
+}
+.c-lightgreen {
+  color: #b2d9c7;
+}
 .c-green {
   color: #9bc4b1;
 }
-.c-white {
-  color: #fff;
+.c-darkgreen {
+  color: #8bb09f;
+}
+.c-darkblue {
+  color: #626a82;
+}
+.c-darkgrey {
+  color: #4a4e59;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-lightestgreen {
+  background-color: #f3f8f3;
+}
+.bg-lightgreen {
+  background-color: #b2d9c7;
+}
+.bg-green {
+  background-color: #9bc4b1;
+}
+.bg-darkgreen {
+  background-color: #8bb09f;
+}
+.bg-darkblue {
+  background-color: #626a82;
+}
+.bg-darkgrey {
+  background-color: #4a4e59;
 }
 
 
@@ -842,6 +878,7 @@ nav a.isActive {
 }
 .boxes .boxes__box {
   background-color: #fff;
+  color: #4a4e59;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
@@ -973,19 +1010,19 @@ body.isLoaded #over-ons {
   background-size: cover;
   background-position: center center;
 }
-#inbetween:before {
+#inbetween .anticurve {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   width: 100vw;
-  height: 300px;
-  height: 20vw;
-  background-image: url('../images/anticurve-green.svg');
-  background-size: 110%;
-  background-position: 3% 0;
-  background-repeat: no-repeat;
+  // height: 300px;
+  // height: 20vw;
+  // background-image: url('../images/anticurve-green.svg');
+  // background-size: 110%;
+  // background-position: 3% 0;
+  // background-repeat: no-repeat;
   z-index: 2;
 }
 
