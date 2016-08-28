@@ -74,18 +74,18 @@ $(document).ready(function () {
   $("[href='#offerte']").click(function(e) {
     e.preventDefault();
     toggleDialog('offerte');
-    window.location.hash = 'offerte';
-    updateOfferPrice();
-    $('.dialog-wrapper, .dialog').offset().top = 0;
-    setTimeout(function() {
-      $('.dialog-wrapper, .dialog').offset().top = 0;
-    }, 300);
-  });
+    // updateOfferPrice();
 
-  if(window.location.hash.indexOf('offerte') == 1) {
-    toggleDialog('offerte');
-    updateOfferPrice();
-  }
+    $.smoothScroll({
+      scrollElement: $('.dialog-wrapper'),
+      scrollTarget: '#top',
+      afterScroll: function() {
+        if(history.pushState) { history.pushState(null, null, $(this).attr('href'));
+        } else { location.hash = $(this).attr('href'); }
+      }
+    });
+    
+  });
 
 
   // Sticky kit
@@ -282,7 +282,7 @@ function questionAction(obj) {
     $question.removeClass('question--selected');
   }
 
-  updateOfferPrice();
+  // updateOfferPrice();
 }
 
 function updateOfferPrice() {

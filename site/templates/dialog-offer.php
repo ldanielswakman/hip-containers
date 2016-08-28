@@ -2,7 +2,7 @@
 
 <div class="dialog-wrapper">
 
-  <div class="dialog-spacer"></div>
+  <div id="top" class="dialog-spacer"></div>
 
   <form id="offerte" class="dialog u-pv40 u-pt20" action="<?= $site->uri() ?>#offerte" method="post">
 
