@@ -1,4 +1,9 @@
-<div id="inbetween" data-parallax="2" style="background-image: url('<?= $section->image($image)->url() ?>');">
+<?
+if ($image = $section->bgimage()->isNotEmpty()) {
+  $url = $section->image($section->bgimage())->url();
+} else { $url = ''; }
+?>
+<div id="inbetween" data-parallax="2" style="background-image: url('<?= $url ?>');">
 
   <svg version="1.1" class="anticurve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-2499 1500.9 1400 138.2" style="enable-background:new -1799 1431.8 1400 138.2;" xml:space="preserve">
     <style type="text/css">

@@ -1006,7 +1006,6 @@ body.isLoaded #over-ons {
   position: relative;
   height: 50%;
   height: 50vw;
-  background-image: url('../images/switch1-original.jpg');
   background-size: cover;
   background-position: center center;
 }
@@ -1017,12 +1016,6 @@ body.isLoaded #over-ons {
   left: 0;
   width: 100%;
   width: 100vw;
-  // height: 300px;
-  // height: 20vw;
-  // background-image: url('../images/anticurve-green.svg');
-  // background-size: 110%;
-  // background-position: 3% 0;
-  // background-repeat: no-repeat;
   z-index: 2;
 }
 

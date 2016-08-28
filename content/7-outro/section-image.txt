@@ -11,3 +11,7 @@ Bg: darkblue
 ----
 
 Bgimage: switch1-original.jpg
+
+----
+
+Color: darkblue
