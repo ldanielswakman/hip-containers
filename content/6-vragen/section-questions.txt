@@ -31,3 +31,7 @@ Items:
 - 
   question: Wat kost een standaard container?
   answer: 'Voor de prijzen van onze standaard containers verwijzen wij naar het onderdeel (link: #tarieven text: Tarieven class:button button--outline button--small u-mh5) op deze site.'
+
+----
+
+Color: white

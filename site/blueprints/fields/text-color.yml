@@ -1,11 +1,10 @@
-label: Background color
+label: Text color
 type: select
-default: white
+default: darkblue
 width: 1/2
 options:
   white: White
   lightestgreen: Lightest Green
-  lightergreen: Lighter Green
   lightgreen: Light Green
   green: Green
   darkgreen: Dark Green

@@ -33,3 +33,7 @@ Carousel-images:
   carousel_image: construction1.jpg
 - 
   carousel_image: facade1.jpg
+
+----
+
+Color: white

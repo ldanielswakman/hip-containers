@@ -10,11 +10,9 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
-    type: textarea
-    size: small
+  text: textarea
   bg: background-color
+  color: text-color
   boxes:
     label: Questions
     type: structure

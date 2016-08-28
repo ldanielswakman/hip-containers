@@ -12,3 +12,7 @@ Text:
 ----
 
 Bg: darkblue
+
+----
+
+Color: lightestgreen

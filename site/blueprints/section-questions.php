@@ -11,6 +11,7 @@ fields:
     label: Title
     type:  text
   bg: background-color
+  color: text-color
   items:
     label: Questions
     type: structure

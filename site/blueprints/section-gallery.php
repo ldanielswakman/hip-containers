@@ -10,10 +10,8 @@ fields:
   title:
     label: Title
     type:  text
-  text:
-    label: Text
-    type:  textarea
   bg: background-color
+  color: text-color
   gallery_images:
     label: Gallery images
     type: structure

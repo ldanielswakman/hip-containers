@@ -16,7 +16,7 @@ fields:
     type: image
     help: preferably minimum 1200px in width
   bg: background-color
+  color: text-color
   text:
-    label: Text
-    type:  textarea
+    extends: textarea
     help: leave empty for no text
