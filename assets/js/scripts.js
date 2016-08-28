@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
   // initiating smooth scroll
-  $('a[href^="#"]').not('[href="#offerte"]').smoothScroll({
+  $('a[href^="#"]').not('[href="#offerte"], [href="#contact"]').smoothScroll({
     afterScroll: function() {
       if(history.pushState) {
         history.pushState(null, null, $(this).attr('href'));
@@ -71,21 +71,18 @@ $(document).ready(function () {
     },
   });
 
-  $("[href='#offerte']").click(function(e) {
-    e.preventDefault();
-    toggleDialog('offerte');
-    // updateOfferPrice();
 
-    $.smoothScroll({
-      scrollElement: $('.dialog-wrapper'),
-      scrollTarget: '#top',
-      afterScroll: function() {
-        if(history.pushState) { history.pushState(null, null, $(this).attr('href'));
-        } else { location.hash = $(this).attr('href'); }
-      }
-    });
-    
+
+  // check location hash for dialogs...
+  if(window.location.hash == '#offerte' || window.location.hash == '#contact') {
+    clickFormDialog(window.location.hash);
+  }
+  // ... and 'manually' set offer & contact form dialog toggle on click
+  $("[href='#offerte'], [href='#contact']").click(function(e) {
+    e.preventDefault();
+    clickFormDialog($(this).attr('href'));
   });
+
 
 
   // Sticky kit
@@ -137,9 +134,6 @@ function diagramSwitch() {
 // Dialog toggle
 function toggleDialog(id) {
   if($('.dialog#' + id)) {
-    // $(!$('.dialog#' + id).hasClass('isVisible')) {
-    //   $('.dialog-wrapper').
-    // }
     $('.dialog-wrapper').toggleClass('isVisible');
     $('.dialog#' + id).toggleClass('isVisible');
     $('#dialog_mask').toggleClass('isVisible');
@@ -149,6 +143,21 @@ function closeDialog() {
     $('.dialog-wrapper').removeClass('isVisible');
     $('.dialog').removeClass('isVisible');
     $('#dialog_mask').removeClass('isVisible');
+}
+
+
+function clickFormDialog(href) {
+  $target = href.replace('#', '');
+  toggleDialog($target);
+
+  $.smoothScroll({
+    scrollElement: $('.dialog-wrapper'),
+    scrollTarget: '#top',
+    afterScroll: function() {
+      if(history.pushState) { history.pushState(null, null, '#' + $target);
+      } else { location.hash = '#' + $target; }
+    }
+  });
 }
 
 

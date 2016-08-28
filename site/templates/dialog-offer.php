@@ -94,7 +94,7 @@
           <? $name_placeholder = ($offer_form->name_placeholder()->isNotEmpty()) ? $offer_form->name_placeholder() : 'Uw naam'; ?>
           <div class="col-xs-12 col-sm-6">
             <label for="naam" class="field--label required"><?= strtoupper($name_title) ?></label>
-            <input name="naam" type="text" class="field<? e($offer_form_obj->hasError('naam'), ' error') ?> u-mb20" placeholder="<?= $name_placeholder ?>" value="<?= $offer_form_obj->echoValue('naam') ?>" required>
+            <input name="naam" type="text" class="field<? e($offer_form_obj->hasError('naam'), ' error') ?> u-mb20" placeholder="<?= $name_placeholder ?>" value="<? $offer_form_obj->echoValue('naam') ?>" required>
           </div>
           <? // endif ?>
           <? // if($offer_form->email_title()->isNotEmpty() && $offer_form->email_placeholder()->isNotEmpty()) : ?>
@@ -102,7 +102,7 @@
           <? $email_placeholder = ($offer_form->email_placeholder()->isNotEmpty()) ? $offer_form->email_placeholder() : 'Uw naam'; ?>
           <div class="col-xs-12 col-sm-6">
             <label for="_from" class="field--label required"><?= strtoupper($email_title) ?></label>
-            <input name="_from" type="email" class="field<? e($offer_form_obj->hasError('_from'), ' error') ?> u-mb20" placeholder="<?= $email_placeholder ?>" value="<?= $offer_form_obj->echoValue('_from') ?>" required>
+            <input name="_from" type="email" class="field<? e($offer_form_obj->hasError('_from'), ' error') ?> u-mb20" placeholder="<?= $email_placeholder ?>" value="<? $offer_form_obj->echoValue('_from') ?>" required>
           </div>
           <? // endif ?>
         </div>

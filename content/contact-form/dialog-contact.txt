@@ -1,0 +1,25 @@
+Title: Neem contact op
+
+----
+
+Name-title: Naam
+
+----
+
+Name-placeholder: Uw naam
+
+----
+
+Email-title: Email
+
+----
+
+Email-placeholder: Uw email
+
+----
+
+Message-title: Bericht
+
+----
+
+Message-placeholder: Hallo, ik wil graag meer informatie over...

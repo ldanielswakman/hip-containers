@@ -8,7 +8,16 @@
 
 <?php snippet('nav') ?>
 
-<?php snippet('../templates/dialog-offer') ?>
+<div class="dialog-wrapper">
+  <div id="top" class="dialog-spacer"></div>
+
+  <?php snippet('../templates/dialog-offer') ?>
+
+  <?php snippet('../templates/dialog-contact') ?>
+
+  <div onclick="closeDialog();" id="dialog_mask"></div>
+</div>
+
 
 <main id="top">
 
