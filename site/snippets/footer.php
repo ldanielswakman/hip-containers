@@ -6,6 +6,8 @@
       </div>
     </a>
 
+    <? snippet('google-analytics') ?>
+
   </footer>
 
 </body>
