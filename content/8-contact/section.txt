@@ -7,7 +7,7 @@ Text:
 <big>*Geïnteresseerd, vragen, of verdere informatie? Neem gerust contact op.*</big>
 
 (link: #contactform text: Contact class: button button--white u-mv20) (link: #offerte text: Vraag offerte aan class: button button--white u-mv20)
-(link: #facebook text: Volg ons of Facebook class: button) (link: #offerte text: Inspiratie op Pinterest class: button)
+(link: #facebook text: Volg ons of Facebook class: button popup:yes) (link: #pinterest text: Inspiratie op Pinterest class: button popup:yes)
 
 ----
 
