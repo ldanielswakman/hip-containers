@@ -1,6 +1,6 @@
 <? $contact_form = $pages->find('contact-form') ?>
 
-<form id="contact" class="dialog u-pv40 u-pt20" action="<?= $site->uri() ?>#contact" method="post">
+<form id="bericht" class="dialog u-pv40 u-pt20" action="<?= $site->uri() ?>#bericht" method="post">
 
   <div class="row">
     <div class="col-xs-12 col-md-10 col-md-offset-1">

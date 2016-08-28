@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 
   // initiating smooth scroll
-  $('a[href^="#"]').not('[href="#offerte"], [href="#contact"]').smoothScroll({
+  $('a[href^="#"]').not('[href="#offerte"], [href="#bericht"]').smoothScroll({
     afterScroll: function() {
       if(history.pushState) {
         history.pushState(null, null, $(this).attr('href'));
@@ -74,11 +74,11 @@ $(document).ready(function () {
 
 
   // check location hash for dialogs...
-  if(window.location.hash == '#offerte' || window.location.hash == '#contact') {
+  if(window.location.hash == '#offerte' || window.location.hash == '#bericht') {
     clickFormDialog(window.location.hash);
   }
-  // ... and 'manually' set offer & contact form dialog toggle on click
-  $("[href='#offerte'], [href='#contact']").click(function(e) {
+  // ... and 'manually' set offer & bericht form dialog toggle on click
+  $("[href='#offerte'], [href='#bericht']").click(function(e) {
     e.preventDefault();
     clickFormDialog($(this).attr('href'));
   });
@@ -134,9 +134,10 @@ function diagramSwitch() {
 // Dialog toggle
 function toggleDialog(id) {
   if($('.dialog#' + id)) {
-    $('.dialog-wrapper').toggleClass('isVisible');
-    $('.dialog#' + id).toggleClass('isVisible');
-    $('#dialog_mask').toggleClass('isVisible');
+    $('.dialog-wrapper').addClass('isVisible');
+    $('.dialog').removeClass('isVisible');
+    $('.dialog#' + id).addClass('isVisible');
+    $('#dialog_mask').addClass('isVisible');
   }
 }
 function closeDialog() {

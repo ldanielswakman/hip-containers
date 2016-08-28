@@ -563,6 +563,13 @@ nav a.isActive {
 .dialog-wrapper.isVisible {
   pointer-events: all;
 }
+/* --- Hide all other dialogs, show the visible one --- */
+.dialog-wrapper.isVisible .dialog {
+  display: none;
+}
+.dialog-wrapper.isVisible .dialog.isVisible {
+  display: block;
+}
 .dialog-spacer {
   height: 50px;
   height: calc(30px + 10vw);
@@ -1089,7 +1096,7 @@ body.isLoaded #over-ons {
 
 
 
-/* --- Offer form: Uniform plugin code --- */
+/* --- Forms: Uniform plugin code --- */
 .uniform__potty {
   position: absolute;
   top: -9999px;
