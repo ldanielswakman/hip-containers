@@ -284,8 +284,27 @@ figure {
   border-color: #4a4e59;
   color: #4a4e59;
 }
+.button--outline:hover {
+  background-color: #4a4e59;
+  border-color: #4a4e59;
+  color: #fff;
+}
 .button--white {
   background-color: #fff;
+  color: #4a4e59;
+}
+.button--white:hover {
+  background-color: #eee;
+  color: #4a4e59;
+}
+.button--outline-white {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.button--outline-white:hover {
+  background-color: #fff;
+  border-color: #fff;
   color: #4a4e59;
 }
 .button--small {
