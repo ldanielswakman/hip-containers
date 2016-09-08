@@ -216,26 +216,6 @@ $(document).ready(function() {
 
 
 
-
-// Component: contentLazyScroll
-// $(document).on(scrollevents, function() { contentLazyScroll(); });
-
-function contentLazyScroll() {
-  scroll = $(window).scrollTop();
-
-  $('.section__content').each(function() {
-    delta = scroll - $(this).offset().top;
-    if(scroll > $(this).closest('.section').offset().top && delta > 0) {
-      $(this).css('transform', 'translateY(' + delta + 'px)');
-    } else {
-      // $(this).css('border', 'none');
-    }
-  });
-}
-
-
-
-
 // Component: Parallax
 $(document).on(scrollevents, function() { doParallax(); });
 
@@ -244,7 +224,7 @@ function doParallax() {
     var $bgobj = $(this); // assigning the object
 
     $(window).scroll(function() {
-      var yPos = ($(window).scrollTop() / $bgobj.data('parallax')); 
+      var yPos = ($(window).scrollTop() - $bgobj.offset().top) / $bgobj.data('parallax');
       
       // Put together our final background position
       var coords = '50% '+ yPos + 'px';
