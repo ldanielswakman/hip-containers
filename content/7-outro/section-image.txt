@@ -6,7 +6,7 @@ Text:
 
 ----
 
-Bg: darkblue
+Bg: darkgrey
 
 ----
 
@@ -14,4 +14,4 @@ Bgimage: switch1-original.jpg
 
 ----
 
-Color: darkblue
+Color: darkgrey

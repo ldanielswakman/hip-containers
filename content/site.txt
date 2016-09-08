@@ -6,7 +6,7 @@ Description: HIP Containers bouwt zeecontainers om tot een stukje van uw droom.
 
 ----
 
-Keywords: 
+Keywords: containers,tuinhuis,kantoor,zorgunit,event
 
 ----
 

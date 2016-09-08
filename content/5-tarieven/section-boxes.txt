@@ -6,7 +6,7 @@ Text: Deze tekst kan eventueel gebruikt worden om de tarieven-boxen toe te licht
 
 ----
 
-Bg: green
+Bg: darkgreen
 
 ----
 
@@ -39,3 +39,7 @@ Boxes:
     * Plug & play opgeleverd
     
     (link: #offerte text: Vraag offerte aan class: button button--outline u-mt20 type-tuinkamer-xl)
+
+----
+
+Color: darkblue

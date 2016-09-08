@@ -2,7 +2,7 @@ Title: Vragen
 
 ----
 
-Bg: darkblue
+Bg: darkgrey
 
 ----
 
@@ -12,15 +12,16 @@ Items:
   question: >
     Kan iedere gewenste maat geleverd
     worden?
-  answer: >
-    Elke gewenste afmeting kan gemaakt
-    worden van containers door deze aan
-    elkaar te koppelen of juist in te
-    korten. De standaard hoogte is 2.43
-    (buitenmaat standaard container) of 2.98
-    (buitenmaat High Cube container)
+  answer: 'Zeecontainers zijn in diverse standaard maten te krijgen: de meest gangbare maten zijn 10ft (ca 3 m), 20 ft (circa 6 m) en 40 ft (12 m). De breedte is altijd 2.43 m buitenmaat. Echter elke gewenste afmeting kan gemaakt worden van containers door deze aan elkaar te koppelen of juist in te korten.'
 - 
-  question: Hoe wordt de container geisoleerd?
+  question: Hoe hoog is een container?
+  answer: >
+    De hoogte (buitenmaat) van een standaard
+    container is 2.43 m. er bestaan echter
+    ook High Cube containers, de hoogte is
+    dan 2.89 m.
+- 
+  question: Hoe wordt de container geïsoleerd?
   answer: >
     De standaard container wordt van binnen
     geisoleerd met zogenaamde PIR platen en
@@ -31,7 +32,49 @@ Items:
 - 
   question: Wat kost een standaard container?
   answer: 'Voor de prijzen van onze standaard containers verwijzen wij naar het onderdeel (link: #tarieven text: Tarieven class:button button--outline button--small u-mh5) op deze site.'
+- 
+  question: Moet de container gefundeerd worden?
+  answer: >
+    Dat is afhankelijk van de ondergrond
+    waar de container op komt te staan. Bij
+    een enkele container volstaat vaak een
+    harde en vlakke ondergrond, bij het
+    combineren van meerdere containers wordt
+    een fundering aangeraden. Een
+    constructeur kan deze berekening voor u
+    doen. Verzorgen van de berekening en
+    uitvoeren fundering valt onder meerwerk.
+- 
+  question: Kan ik containers koppelen?
+  answer: >
+    Dat kan zeker, de containers worden door
+    middel van bouten aan elkaar bevestigd
+    en vervolgens waterdicht gemaakt.
+- 
+  question: Kan ik containers stapelen?
+  answer: >
+    Dat kan zeker, afhankelijk van het
+    ontwerp is extra ondersteuning nodig
+    door middel van steunpalen.
+- 
+  question: >
+    Kan ik de container gedeeltelijk zelf
+    afbouwen?
+  answer: >
+    Dat kan zeker, in overleg is het
+    mogelijk een container te bestellen waar
+    bijvoorbeeld alleen het spuitwerk en de
+    plaatsing van de kozijnen is uitgevoerd.
+- 
+  question: Hoe zit het met vergunningen?
+  answer: >
+    Wij kunnen geen uitspraken over
+    vergunningen doen, dit is per gemeente
+    verschillend. Wel is de wetgeving per 1
+    nov 2014 versoepeld en is in veel
+    gevallen het plaatsen van een container
+    vergunningsvrij.
 
 ----
 
-Color: white
+Color: lightestgreen

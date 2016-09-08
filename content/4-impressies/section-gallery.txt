@@ -6,30 +6,40 @@ Text:
 
 ----
 
-Bg: darkblue
+Bg: darkgrey
 
 ----
 
 Gallery-images: 
 
 - 
-  carousel_image: facade1.jpg
+  carousel_image: facade.jpg
 - 
   carousel_image: facade1nw.jpg
 - 
-  carousel_image: switch2.jpg
-- 
-  carousel_image: facade1nw.jpg
+  carousel_image: gestapeld.jpg
 - 
   carousel_image: switch1.jpg
 - 
-  carousel_image: facade1.jpg
-- 
   carousel_image: switch2.jpg
 - 
-  carousel_image: facade1nw.jpg
+  carousel_image: kantoorintuin.jpg
 - 
-  carousel_image: facade1nw.jpg
+  carousel_image: showroomhout.jpg
+- 
+  carousel_image: tuinhuis.jpg
+- 
+  carousel_image: tuinhuis2.jpg
+- 
+  carousel_image: woonkamer2.jpg
+- 
+  carousel_image: woonkamer3.jpg
+- 
+  carousel_image: slaapkamer.jpg
+- 
+  carousel_image: galerie.jpg
+- 
+  carousel_image: tuinhuis3.jpg
 
 ----
 
